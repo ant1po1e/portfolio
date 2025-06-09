@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch",
+    "mini": "npx tailwindcss -o dist/css/output.css --minify"
+  },
+  "devDependencies": {
+    "fluid-tailwind": "^1.0.4",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@preline/accordion": "^3.1.0",
+    "dotenv": "^16.5.0",
+    "flowbite": "^2.3.0",
+    "tailwind-scrollbar": "^2.1.0"
+  }
+}
