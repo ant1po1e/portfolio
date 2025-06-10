@@ -107,76 +107,11 @@
                   <div data-group="main">
                      <button onclick="toggleAccordion('accordion-1', this)"
                         class="flex items-center w-full p-2 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                        <i class="bi bi-caret-down-fill mr-4" data-icon></i> personal-info
+                        <i class="bi bi-caret-down-fill mr-4" data-icon></i> contact
                      </button>
                      <div id="accordion-1" data-group="accordion-1">
-                        <!-- Nested About -->
-                        <button onclick="toggleAccordion('accordion-1-1', this)"
-                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                           <i class="bi bi-caret-down-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
-                           about
-                        </button>
-                        <div id="accordion-1-1">
-                           <button onclick="toggleContent('about-content', '.cs')"
-                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                              about.cs
-                           </button>
-                        </div>
-
-                        <!-- Nested Experience-->
-                        <button onclick="toggleAccordion('accordion-1-2', this)"
-                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
-                           experience
-                        </button>
-                        <div id="accordion-1-2" class="hidden">
-                           <button onclick="toggleContent('experience-content', '.cs')"
-                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                              experience.cs
-                           </button>
-                        </div>
-
-                        <!-- Nested About -->
-                        <button onclick="toggleAccordion('accordion-1-3', this)"
-                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
-                           education
-                        </button>
-                        <div id="accordion-1-3" class="hidden">
-                           <button onclick="toggleContent('education-content', '.cs')"
-                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                              education.cs
-                           </button>
-                        </div>
-                     </div>
-
-                     <!-- Accordion Item: other -->
-                     <button onclick="toggleAccordion('accordion-2', this)"
-                        class="flex items-center w-full p-2 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                        <i class="bi bi-caret-right-fill mr-4" data-icon></i> other
-                     </button>
-                     <div id="accordion-2" data-group="accordion-2" class="hidden">
-                        <!-- Nested CV -->
-                        <button onclick="toggleAccordion('accordion-2-1', this)"
-                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
-                           cv
-                        </button>
-                        <div id="accordion-2-1" class="hidden">
-                           <button onclick="toggleContent('cv-content', '.pdf')"
-                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                              cv.pdf
-                           </button>
-                        </div>
-
-                        <!-- Nested Contact-->
-                        <button onclick="toggleAccordion('accordion-2-2', this)"
-                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
-                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
-                           contact
-                        </button>
-                        <div id="accordion-2-2" class="hidden">
-                           <button onclick="toggleContent('contact-content', '.cs')"
+                        <div>
+                           <button
                               class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
                               contact.cs
                            </button>
@@ -191,7 +126,7 @@
                      id="navbar-default">
                      <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
                         <li>
-                           <span class="inline-block py-2 px-3" id="content-title">about.cs</span> <a href="/"
+                           <span class="inline-block py-2 px-3" id="content-title">contact.cs</span> <a href="/"
                               class="hover:text-white transition duration-300 border-r border-[#404551] inline-block py-2 px-3"><i
                                  class="bi bi-x-lg"></i></a>
                         </li>
