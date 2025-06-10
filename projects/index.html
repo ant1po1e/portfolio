@@ -28,320 +28,177 @@
    <link rel="stylesheet" href="/dist/css/style.css">
    <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
-   <title>Ant1po1e | Projects</title>
+   <title>ant1po1e | Home</title>
 </head>
 
-<body class="relative min-h-screen bg-[#f3f1e7] overflow-x-hidden select-none">
-   <div class="absolute inset-0 bg-[rgba(200,200,200,0.6)] backdrop-blur-[10px]"></div>
-   <header class="flex justify-between items-center pt-4 relative z-10">
-      <a href="/"
-         class="text-black font-bold font-merienda text-lg md:text-2xl p-3 rounded-r-lg bg-white shadow-lg md:hover:text-blue-400 md:hover:pl-12 transition-all duration-300">
-         <i class="bi bi-arrow-left"></i> Back
-      </a>
-      <div class="flex items-center space-x-4 text-black text-sm font-normal px-6">
-         <a href="https://osu.ppy.sh/users/Antipole"
-            class="flex items-center bg-white bg-opacity-60 backdrop-blur-md shadow-lg md:hover:bg-blue-400 rounded-full px-1 py-1 transition duration-300">
-            <img alt="Antipole's Avatar" class="w-10 h-10 rounded-full object-cover" height="32"
-               src="https://a.ppy.sh/17258072" width="32" />
-         </a>
-      </div>
-   </header>
-   <main class="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-6 min-h-[calc(100vh-72px)]">
-
+<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none">
+   <div class="absolute inset-0 bg-[#16191d] backdrop-blur-[10px]"></div>
+   <main class="relative w-screen h-screen flex justify-center items-center z-10 mx-auto">
       <!-- Main Section -->
-      <section class="w-full px-4 md:px-24 flex justify-center items-center">
-         <div class="w-full md:w-[62%] px-5 py-10 bg-white bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg">
-            <div class="w-full px-4">
-               <div class="mx-auto text-center">
-                  <h1 class="font-bold text-black font-merienda text-xl md:text-3xl">Projects</h1>
-               </div>
-            </div>
-
-            <div class="text-center mt-5 w-full px-4 py-4 border-t-2 border-t-black text-white">
-               <div id="animation-carousel" class="relative w-full" data-carousel="static">
-                  <!-- Carousel wrapper -->
-                  <div id="carousel-container" class="relative overflow-hidden rounded-lg h-[7.2rem] md:h-72">
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="active">
-                        <img src="/dist/img/projects/gulanova-site.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Gulanova Website">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Gulanova Website</h2>
-                           <a href="https://gulanova.top"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Gulanova Website</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=html,css,js,tailwind,jquery,figma" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://gulanova.top"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-link"></i> Site
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/wave-walker.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Wave Walker">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Wave Walker</h2>
-                           <a href="https://ant1po1e.itch.io/wave-walker"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Wave Walker</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://ant1po1e.itch.io/wave-walker"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-shop-window"></i> Itch.io
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/wave-walker-2.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Wave Walker 2">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Wave Walker 2</h2>
-                           <a href="https://ant1po1e.itch.io/wave-walker-2"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Wave Walker 2</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://ant1po1e.itch.io/wave-walker-2"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-shop-window"></i> Itch.io
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/wave-walker-3.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Wave Walker 3">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Wave Walker 3: The Box</h2>
-                           <a href="https://ant1po1e.itch.io/wave-walker-3-the-box"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Wave Walker 3</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://ant1po1e.itch.io/wave-walker-3-the-box"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-shop-window"></i> Itch.io
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/dodge-the-thing.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Dodge the Thing">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Dodge the Thing</h2>
-                           <a href="https://ant1po1e.itch.io/dodge-the-thing"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Dodge the Thing</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://ant1po1e.itch.io/dodge-the-thing"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-shop-window"></i> Itch.io
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/apolz-pomodoro.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Apolz Pomodoro">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Apolz Pomodoro</h2>
-                           <a href="https://ant1po1e.itch.io/apolz-pomodoro"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Apolz Pomodoro</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://ant1po1e.itch.io/apolz-pomodoro"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-shop-window"></i> Itch.io
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/simple-todo.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Apolz Pomodoro">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Simple Todo</h2>
-                           <a href="https://github.com/ant1po1e/simple-todo/releases"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Simple Todo</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=cs,dotnet,sqlite" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://github.com/ant1po1e/simple-todo/releases"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="bi bi-download"></i></i> Download
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/zombie-shooter.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Zombie Shooter">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Zombie Shooter</h2>
-                           <a href="https://github.com/ant1po1e/zombie-shooter-course"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Zombie Shooter</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://github.com/ant1po1e/zombie-shooter-course"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-file-earmark-code"></i> Source Code
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/gothicvania.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Find The Key">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Gothicvania</h2>
-                           <a href="https://github.com/ant1po1e/Gothicvania"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Gothicvania</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=unity,cs" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://github.com/ant1po1e/Gothicvania"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-file-earmark-code"></i> Source Code
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="hidden duration-300 ease-linear group" data-carousel-item="">
-                        <img src="/dist/img/projects/find-the-key.webp"
-                           class="absolute block w-full max-w-full h-auto object-contain md:object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg"
-                           alt="Find The Key">
-                        <div
-                           class="absolute block w-full h-full py-6 px-6 sm:py-10 sm:px-20 -translate-x-1/2 z-50 -translate-y-1/2 top-1/2 left-1/2 rounded-lg bg-white/70 backdrop-blur-md text-black opacity-0 md:group-hover:opacity-100 transition duration-300">
-                           <h2 class="hidden md:inline font-bold text-lg md:text-2xl">Find The Key</h2>
-                           <a href="https://github.com/ant1po1e/Find-The-Key"
-                              class="inline md:hidden font-bold text-lg md:text-2xl">Find The Key</a>
-                           <div class="mt-2 flex justify-center">
-                              <img src="https://skillicons.dev/icons?i=html" alt="Stack">
-                           </div>
-                           <div class="mt-12 md:hover:scale-110 transition duration-300">
-                              <a href="https://github.com/ant1po1e/Find-The-Key"
-                                 class="text-lg md:text-xl hidden md:inline bg-white rounded-lg p-2 md:hover:bg-blue-400 md:hover:text-white md:hover:scale-110 transition duration-300">
-                                 <i class="text-2xl bi bi-file-earmark-code"></i> Source Code
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-
+      <section class="w-full h-full p-0 md:p-12 flex flex-col justify-center items-center">
+         <div class="w-full h-full bg-[#282c34] bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg flex flex-col">
+            <!-- Navbar -->
+            <nav class="rounded-t-lg border border-[#404551]">
+               <div class="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
+                  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <li>
+                           <a href="/"
+                              class="block py-2 px-3 border-r rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300">ant1po1e.sln</a>
+                        </li>
+                        <li>
+                           <a href="/about"
+                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
+                        </li>
+                        <li>
+                           <a href="/project"
+                              class="block py-2 px-3 border-r shadow-[inset_0_-3px_0_0_rgba(92,65,139)] border-[#404551] bg-[#282c34] text-white"
+                              aria-current="page">project.sln</a>
+                        </li>
+                     </ul>
                   </div>
-                  <!-- Slider controls -->
-                  <button type="button"
-                     class="absolute top-0 start-[-20px] z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
-                     data-carousel-prev>
-                     <span
-                        class="inline-flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg bg-black/50 md:group-hover:bg-white/50 ring-4 ring-white outline-none md:hover:scale-110 transition duration-300">
-                        <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                     </span>
-                  </button>
-                  <button type="button"
-                     class="absolute top-0 end-[-20px] z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
-                     data-carousel-next>
-                     <span
-                        class="inline-flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg bg-black/50 md:group-hover:bg-white/50 ring-4 ring-white outline-none md:hover:scale-110 transition duration-300">
-                        <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
-                           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="sr-only">Next</span>
-                     </span>
+                  <ul>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">contact.sln</a>
+                     </li>
+                  </ul>
+                  <button data-collapse-toggle="navbar-default" type="button"
+                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-[#3f4450] focus:ring-gray-600"
+                     aria-controls="navbar-default" aria-expanded="false">
+                     <span class="sr-only">Open main menu</span>
+                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="M1 1h15M1 7h15M1 13h15" />
+                     </svg>
                   </button>
                </div>
-            </div>
+            </nav>
+
+            <!-- Content -->
+            <section class="flex flex-grow justify-start items-stretch text-start">
+               <!-- Sidebar -->
+               <aside class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85] font-mono">
+                  <div class="p-4 shadow-[inset_3px_0_0_0_rgba(92,65,139)] bg-[#282c34]">
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        class="text-[24px] text-white hover:cursor-pointer" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z">
+                        </path>
+                     </svg>
+                  </div>
+                  <div class="p-4">
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        class="text-[24px] hover:cursor-pointer hover:text-white transition duration-300" height="1em"
+                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.988 2.988 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.099 2.99 2.99 0 0 1 2.668-1.667h2.99a4.484 4.484 0 0 0 4.223-3.039 3.736 3.736 0 0 0 3.25-3.687zM4.565 3.738a2.242 2.242 0 1 1 4.484 0 2.242 2.242 0 0 1-4.484 0zm4.484 16.441a2.242 2.242 0 1 1-4.484 0 2.242 2.242 0 0 1 4.484 0zm8.221-9.715a2.242 2.242 0 1 1 0-4.485 2.242 2.242 0 0 1 0 4.485z">
+                        </path>
+                     </svg>
+                  </div>
+               </aside>
+
+               <aside class="w-56 min-h-full border-r text-[#7c7f85] border-[#404551] font-mono">
+                  <!-- Accordion Item: personal-info -->
+                  <div data-group="main">
+                     <button onclick="toggleAccordion('accordion-1', this)"
+                        class="flex items-center w-full p-2 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                        <i class="bi bi-caret-down-fill mr-4" data-icon></i> projects
+                     </button>
+                     <div id="accordion-1" data-group="accordion-1">
+                        <button onclick="toggleFilter('show-all-projects')"
+                           class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           show-all.cs
+                        </button>
+
+                        <button onclick="toggleFilter('web-projects')"
+                           class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           web.cs
+                        </button>
+
+                        <button onclick="toggleFilter('desktop-projects')"
+                           class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           desktop.cs
+                        </button>
+
+                        <button onclick="toggleFilter('unity-projects')"
+                           class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           unity.cs
+                        </button>
+                     </div>
+                  </div>
+               </aside>
+
+               <!-- Content Panel -->
+               <div class="flex-1 flex flex-col">
+                  <div class="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]"
+                     id="navbar-default">
+                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <li>
+                           <span class="inline-block py-2 px-3" id="content-title">show-all.cs</span> <a href="/"
+                              class="hover:text-white transition duration-300 border-r border-[#404551] inline-block py-2 px-3"><i
+                                 class="bi bi-x-lg"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <!-- Projects Content -->
+                  <div id="projects-content"
+                     class="flex-grow justify-start items-start text-base text-start p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]">
+                     <div id="web-projects" class="mb-10">
+                        <h3 class="font-mono text-[#5c6370] text-xl mb-4">// Web Projects</h3>
+                        <div class="flex flex-wrap gap-5"></div>
+                     </div>
+                     <div id="desktop-projects" class="mb-10">
+                        <h3 class="font-mono text-[#5c6370] text-xl mb-4">// Desktop Projects</h3>
+                        <div class="flex flex-wrap gap-5"></div>
+                     </div>
+                     <div id="unity-projects" class="mb-10">
+                        <h3 class="font-mono text-[#5c6370] text-xl mb-4">// Unity Projects</h3>
+                        <div class="flex flex-wrap gap-5"></div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="w-full rounded-b-lg shadow-sm border border-[#404551]">
+               <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center md:justify-between">
+                  <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                     <li>
+                        <span href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
+                           </i></span>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300 scale-105"><i
+                              class="bi bi-linkedin"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                              class="bi bi-instagram"></i></a>
+                     </li>
+                  </ul>
+                  <ul>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                              class="bi bi-github"></i> @ant1po1e</a>
+                     </li>
+                  </ul>
+               </div>
+            </footer>
          </div>
       </section>
-
-      <!-- Footer -->
-      <footer
-         class="fixed bottom-0 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-wrap items-center justify-center gap-6">
-         <div class="w-full bg-white bg-opacity-50 backdrop-blur-md rounded-lg p-6 shadow-lg flex gap-5 md:gap-12">
-            <p class="font-merienda">
-               <a href="/projects/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300"
-                  aria-label="Projects">
-                  PROJECTS
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="/tools/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  TOOLS
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="/contact/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  CONTACT
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="https://ant1po1e.itch.io"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  ITCH.IO
-               </a>
-            </p>
-         </div>
-      </footer>
    </main>
 
-   <script src="/dist/flowbite/dist/flowbite.min.js"></script>
+   <script src="/dist/js/script.js"></script>
 </body>
 
 </html>

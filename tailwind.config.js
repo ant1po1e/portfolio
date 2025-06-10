@@ -9,11 +9,8 @@ module.exports = {
     files: [
       'index.html',
       './about/index.html',
-      './projects/index.html',
-      './tools/index.html',
-      './tools/snap-calculator.html',
-      './tools/bbcode-colorizer.html',
-      './tools/todo.html',
+      './project/index.html',
+      './dist/js/*.js',
       './dist/flowbite/**/*.js'
     ],
     extract: {

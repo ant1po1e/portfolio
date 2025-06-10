@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Gulanova Website",
+        "desc": "A modern personal website for Gulanova, featuring responsive design and interactive elements.",
+        "filename": "gulanova-site.csproj",
+        "image": "../dist/img/projects/gulanova-site.webp",
+        "type": "web",
+        "url": "https://gulanova.top",
+        "stack": "html,css,js,tailwind,jquery,figma"
+    },
+    {
+        "title": "Portfolio Website",
+        "desc": "A sleek portfolio site to showcase projects, skills, and contact information.",
+        "filename": "portfolio-site.csproj",
+        "image": "../dist/img/projects/portfolio-site.webp",
+        "type": "web",
+        "url": "https://antipole.my.id",
+        "stack": "html,css,js,tailwind"
+    },
+    {
+        "title": "Simple Todo",
+        "desc": "A lightweight desktop application for managing daily tasks with a simple interface.",
+        "filename": "simple-todo.csproj",
+        "image": "../dist/img/projects/simple-todo.webp",
+        "type": "desktop",
+        "url": "https://github.com/ant1po1e/simple-todo/releases/",
+        "stack": "cs,dotnet,sqlite"
+    },
+    {
+        "title": "Wave Walker",
+        "desc": "A Unity-based adventure game where players navigate challenging wave-filled environments.",
+        "filename": "wave-walker.csproj",
+        "image": "../dist/img/projects/wave-walker.webp",
+        "type": "unity",
+        "url": "https://ant1po1e.itch.io/wave-walker",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Wave Walker 2",
+        "desc": "The sequel to Wave Walker, introducing new levels, mechanics, and enhanced graphics.",
+        "filename": "wave-walker-2.csproj",
+        "image": "../dist/img/projects/wave-walker-2.webp",
+        "type": "unity",
+        "url": "https://ant1po1e.itch.io/wave-walker-2",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Wave Walker 3: The Box",
+        "desc": "The third installment in the Wave Walker series, featuring unique puzzles and box-based gameplay.",
+        "filename": "wave-walker-3.csproj",
+        "image": "../dist/img/projects/wave-walker-3.webp",
+        "type": "unity",
+        "url": "https://ant1po1e.itch.io/wave-walker-3-the-box",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Dodge the Thing",
+        "desc": "A fast-paced Unity game where players must dodge obstacles and survive as long as possible.",
+        "filename": "dodge-the-thing.csproj",
+        "image": "../dist/img/projects/dodge-the-thing.webp",
+        "type": "unity",
+        "url": "https://ant1po1e.itch.io/dodge-the-thing",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Zombie Shooter",
+        "desc": "A Unity-based shooting game where players fight off waves of zombies using various weapons.",
+        "filename": "zombie-shooter.csproj",
+        "image": "../dist/img/projects/zombie-shooter.webp",
+        "type": "unity",
+        "url": "https://github.com/ant1po1e/zombie-shooter-course",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Gothicvania",
+        "desc": "A 2D platformer inspired by gothic and metroidvania genres, built with Unity.",
+        "filename": "gothicvania.csproj",
+        "image": "../dist/img/projects/gothicvania.webp",
+        "type": "unity",
+        "url": "https://github.com/ant1po1e/Gothicvania",
+        "stack": "unity,cs"
+    },
+    {
+        "title": "Apolz Pomodoro",
+        "desc": "A productivity timer app based on the Pomodoro Technique, developed in Unity.",
+        "filename": "apolz-pomodoro.csproj",
+        "image": "../dist/img/projects/apolz-pomodoro.webp",
+        "type": "unity",
+        "url": "https://ant1po1e.itch.io/apolz-pomodoro",
+        "stack": "unity,cs"
+    }
+]
