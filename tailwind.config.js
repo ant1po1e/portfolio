@@ -9,7 +9,7 @@ module.exports = {
     files: [
       'index.html',
       './about/index.html',
-      './project/index.html',
+      './projects/index.html',
       './dist/js/*.js',
       './dist/flowbite/**/*.js'
     ],
