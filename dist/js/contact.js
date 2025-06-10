@@ -7,23 +7,27 @@ const spinner = document.getElementById("spinner");
 form.addEventListener("submit", (e) => {
    e.preventDefault();
 
+   const recaptchaResponse = grecaptcha.getResponse();
+   if (!recaptchaResponse) {
+      alert("Please complete the reCAPTCHA!");
+      return;
+   }
+
    submitBtn.disabled = true;
    submitText.classList.add("hidden");
    spinner.classList.remove("hidden");
 
    fetch(scriptURL, {
-      method: "POST",
-      body: new FormData(form),
-   })
+         method: "POST",
+         body: new FormData(form),
+      })
       .then((response) => {
          form.reset();
-
-         // Show success
+         grecaptcha.reset();
          spinner.classList.add("hidden");
          submitText.classList.remove("hidden");
          submitText.innerHTML = '<i class="bi bi-check-lg"></i> Success';
 
-         // Reset after 3 seconds
          setTimeout(() => {
             submitText.innerHTML = '<i class="bi bi-caret-right-fill"></i> Run';
             submitBtn.disabled = false;
