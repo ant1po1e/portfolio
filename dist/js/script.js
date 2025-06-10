@@ -114,7 +114,7 @@ fetch('../dist/data/experience.json')
 
         addLine('<span class="text-[#5c6370]">// Work Experience</span>', 1);
         addLine('<span class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">class</span> <span class="text-[#61afef]">Experience</span> <span class="text-[#bbbbbb]">{</span>');
-        addLine('&nbsp;&nbsp;&nbsp;<span class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">List</span>&lt;<span class="text-[#61afef]">Job</span>&gt; <span class="text-[#d19a66]">Jobs</span> =&gt; <span class="text-[#c678dd]">new</span>() <span class="text-[#bbbbbb]">{</span>');
+        addLine('&nbsp;&nbsp;&nbsp;<span class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">List</span>&lt;<span class="text-[#61afef]">Job</span>&gt; <span class="text-[#e5c07b]">Jobs</span> =&gt; <span class="text-[#c678dd]">new</span>() <span class="text-[#bbbbbb]">{</span>');
 
         data.forEach((job, index) => {
             addLine('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#bbbbbb]">{</span>');

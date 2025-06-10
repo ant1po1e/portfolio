@@ -30,109 +30,269 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
-   <title>Ant1po1e | Contact</title>
+   <title>ant1po1e | Home</title>
 </head>
 
-<body class="relative min-h-screen bg-[#f3f1e7] overflow-x-hidden select-none">
-   <div class="absolute inset-0 bg-[rgba(200,200,200,0.6)] backdrop-blur-[10px]"></div>
-   <header class="flex justify-between items-center pt-4 relative z-10">
-      <a href="/"
-         class="text-black font-bold font-merienda text-lg md:text-2xl p-3 rounded-r-lg bg-white shadow-lg md:hover:text-blue-400 md:hover:pl-12 transition-all duration-300">
-         <i class="bi bi-arrow-left"></i> Back
-      </a>
-      <div class="flex items-center space-x-4 text-black text-sm font-normal px-6">
-         <a href="https://osu.ppy.sh/users/Antipole"
-            class="flex items-center bg-white bg-opacity-60 backdrop-blur-md shadow-lg md:hover:bg-blue-400 rounded-full px-1 py-1 transition duration-300">
-            <img alt="Antipole's Avatar" class="w-10 h-10 rounded-full object-cover" height="32"
-               src="https://a.ppy.sh/17258072" width="32" />
-         </a>
-      </div>
-   </header>
-   <main class="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-6 min-h-[calc(100vh-72px)]">
-
+<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none">
+   <div class="absolute inset-0 bg-[#16191d] backdrop-blur-[10px]"></div>
+   <main class="relative w-screen h-screen flex justify-center items-center z-10 mx-auto">
       <!-- Main Section -->
-      <section class="w-full px-4 md:px-24 flex justify-center items-center">
-         <div class="w-full md:w-1/2 px-5 py-10 bg-white bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg">
-            <div class="w-full px-4">
-               <div class="mx-auto text-center">
-                  <h1 class="font-bold text-black font-merienda text-xl md:text-3xl">Contact
-                     Me!</h1>
+      <section class="w-full h-full p-0 md:p-12 flex flex-col justify-center items-center">
+         <div class="w-full h-full bg-[#282c34] bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg flex flex-col">
+            <!-- Navbar -->
+            <nav class="rounded-t-lg border border-[#404551]">
+               <div class="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
+                  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <li>
+                           <a href="#"
+                              class="block py-2 px-3 border-r rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300"
+                              aria-current="page">ant1po1e.sln</a>
+                        </li>
+                        <li>
+                           <a href="/about"
+                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
+                        </li>
+                        <li>
+                           <a href="/projects"
+                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <ul>
+                     <li>
+                        <a href="/contact"
+                           class="block py-2 px-3  shadow-[inset_0_-3px_0_0_rgba(92,65,139)]  border-l border-[#404551] text-white">contact.sln</a>
+                     </li>
+                  </ul>
+                  <button data-collapse-toggle="navbar-default" type="button"
+                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
+                     aria-controls="navbar-default" aria-expanded="false">
+                     <span class="sr-only">Open main menu</span>
+                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="M1 1h15M1 7h15M1 13h15" />
+                     </svg>
+                  </button>
                </div>
-            </div>
+            </nav>
 
-            <div class="text-center mt-5 w-full px-4 py-4 border-t-2 border-t-black text-white">
-               <form name="Ant1po1e-contact-form" class="space-y-4 max-w-md mx-auto">
-                  <div>
-                     <label for="name" class="sr-only">Name</label>
-                     <input type="text" id="name" name="name" placeholder="Name"
-                        class="w-full bg-slate-700 shadow-lg bg-opacity-50 text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 md:hover:scale-105 transition duration-300"
-                        required>
+            <!-- Content -->
+            <section class="flex flex-grow justify-start items-stretch text-start">
+               <!-- Sidebar -->
+               <aside class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85] font-mono">
+                  <div class="p-4 shadow-[inset_3px_0_0_0_rgba(92,65,139)] bg-[#282c34]">
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        class="text-[24px] text-white hover:cursor-pointer" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5L17.5 0zm0 2.12l2.38 2.38H17.5V2.12zm-3 20.38h-12v-15H7v9.07L8.5 18h6v4.5zm6-6h-12v-15H16V6h4.5v10.5z">
+                        </path>
+                     </svg>
                   </div>
-                  <div>
-                     <label for="email" class="sr-only">Email</label>
-                     <input type="email" id="email" name="email" placeholder="Email"
-                        class="w-full bg-slate-700 shadow-lg bg-opacity-50 text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 md:hover:scale-105 transition duration-300"
-                        required>
+                  <div class="p-4">
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        class="text-[24px] hover:cursor-pointer hover:text-white transition duration-300" height="1em"
+                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.988 2.988 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.099 2.99 2.99 0 0 1 2.668-1.667h2.99a4.484 4.484 0 0 0 4.223-3.039 3.736 3.736 0 0 0 3.25-3.687zM4.565 3.738a2.242 2.242 0 1 1 4.484 0 2.242 2.242 0 0 1-4.484 0zm4.484 16.441a2.242 2.242 0 1 1-4.484 0 2.242 2.242 0 0 1 4.484 0zm8.221-9.715a2.242 2.242 0 1 1 0-4.485 2.242 2.242 0 0 1 0 4.485z">
+                        </path>
+                     </svg>
                   </div>
-                  <div>
-                     <label for="message" class="sr-only">Message</label>
-                     <textarea type="text" id="message" name="message" placeholder="Your message" rows="4"
-                        class="w-full bg-slate-700 shadow-lg bg-opacity-50 text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 md:hover:scale-105 transition duration-300 resize-none"
-                        required></textarea>
-                  </div>
-                  <div
-                     class="alert success hidden items-center justify-center w-full text-center mb-8 p-4 space-x-4 rounded-lg shadow text-blue-400 divide-gray-700 space-x bg-white border border-blue-300"
-                     role="alert">
-                     <i class="bi bi-send"></i>
-                     <div class="pl-1 text-sm font-normal">
-                        <span class="font-bold">Thanks!</span> Your message has been submitted.
+               </aside>
+
+               <aside class="w-56 min-h-full border-r text-[#7c7f85] border-[#404551] font-mono">
+                  <!-- Accordion Item: personal-info -->
+                  <div data-group="main">
+                     <button onclick="toggleAccordion('accordion-1', this)"
+                        class="flex items-center w-full p-2 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                        <i class="bi bi-caret-down-fill mr-4" data-icon></i> personal-info
+                     </button>
+                     <div id="accordion-1" data-group="accordion-1">
+                        <!-- Nested About -->
+                        <button onclick="toggleAccordion('accordion-1-1', this)"
+                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           <i class="bi bi-caret-down-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
+                           about
+                        </button>
+                        <div id="accordion-1-1">
+                           <button onclick="toggleContent('about-content', '.cs')"
+                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                              about.cs
+                           </button>
+                        </div>
+
+                        <!-- Nested Experience-->
+                        <button onclick="toggleAccordion('accordion-1-2', this)"
+                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
+                           experience
+                        </button>
+                        <div id="accordion-1-2" class="hidden">
+                           <button onclick="toggleContent('experience-content', '.cs')"
+                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                              experience.cs
+                           </button>
+                        </div>
+
+                        <!-- Nested About -->
+                        <button onclick="toggleAccordion('accordion-1-3', this)"
+                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
+                           education
+                        </button>
+                        <div id="accordion-1-3" class="hidden">
+                           <button onclick="toggleContent('education-content', '.cs')"
+                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                              education.cs
+                           </button>
+                        </div>
+                     </div>
+
+                     <!-- Accordion Item: other -->
+                     <button onclick="toggleAccordion('accordion-2', this)"
+                        class="flex items-center w-full p-2 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                        <i class="bi bi-caret-right-fill mr-4" data-icon></i> other
+                     </button>
+                     <div id="accordion-2" data-group="accordion-2" class="hidden">
+                        <!-- Nested CV -->
+                        <button onclick="toggleAccordion('accordion-2-1', this)"
+                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
+                           cv
+                        </button>
+                        <div id="accordion-2-1" class="hidden">
+                           <button onclick="toggleContent('cv-content', '.pdf')"
+                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                              cv.pdf
+                           </button>
+                        </div>
+
+                        <!-- Nested Contact-->
+                        <button onclick="toggleAccordion('accordion-2-2', this)"
+                           class="flex items-center w-full p-2 pl-6 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                           <i class="bi bi-caret-right-fill mr-4" data-icon></i> <i class="bi bi-folder-fill mr-2"></i>
+                           contact
+                        </button>
+                        <div id="accordion-2-2" class="hidden">
+                           <button onclick="toggleContent('contact-content', '.cs')"
+                              class="flex items-center w-full p-2 pl-14 text-left bg-transparent hover:bg-[#3f4450] hover:text-white transition duration-300">
+                              contact.cs
+                           </button>
+                        </div>
                      </div>
                   </div>
-                  <div class="text-center flex justify-center">
-                     <button type="submit" id="submit"
-                        class="relative flex h-[50px] w-24 md:hover:w-40 items-center justify-center overflow-hidden rounded-lg bg-black text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-400 before:duration-500 before:ease-out md:hover:shadow-blue-400 md:hover:before:h-56 md:hover:before:w-56 duration-300">
-                        <span class="relative z-10">Submit</span>
-                     </button>
+               </aside>
+
+               <!-- Content Panel -->
+               <div class="flex-1 flex flex-col">
+                  <div class="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]"
+                     id="navbar-default">
+                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <li>
+                           <span class="inline-block py-2 px-3" id="content-title">about.cs</span> <a href="/"
+                              class="hover:text-white transition duration-300 border-r border-[#404551] inline-block py-2 px-3"><i
+                                 class="bi bi-x-lg"></i></a>
+                        </li>
+                     </ul>
                   </div>
-               </form>
-            </div>
+
+                  <!-- Contact Content -->
+                  <div class="flex-grow justify-start items-start text-base text-start p-10 h-0 overflow-auto"
+                     id="about-content">
+                     <div class="text-start font-mono">
+                        <div class="flex flex-wrap justify-start mt-3">
+                           <form name="Ant1po1e-contact-form"
+                              class="text-[#5c6370] text-base mb-5 font-mono leading-relaxed">
+                              <span class="text-[#3e4451]">1</span>&nbsp;&nbsp;&nbsp;// Contact me<br>
+                              <span class="text-[#3e4451]">2</span>&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">class</span> <span
+                                 class="text-[#61afef]">Contact</span> <span class="text-[#bbbbbb]">{</span><br>
+                              <span class="text-[#3e4451]">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">string</span> <span
+                                 class="text-[#e5c07b]">Name</span> => <span class="text-[#98b75d]">"</span>
+                              <input id="name" name="name" type="text" placeholder="Your name"
+                                 class="bg-transparent border-none p-0 focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-1/3 inline-block"
+                                 required /> <span class="text-[#98b75d]">"</span>;<br>
+                              <span class="text-[#3e4451]">4</span><br>
+                              <span class="text-[#3e4451]">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">string</span> <span
+                                 class="text-[#e5c07b]">Email</span> => <span class="text-[#98b75d]">"</span>
+                              <input id="email" name="email" type="email" placeholder="you@example.com"
+                                 class="bg-transparent border-none p-0 focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-1/3 inline-block"
+                                 required /> <span class="text-[#98b75d]">"</span>;<br>
+                              <span class="text-[#3e4451]">6</span><br>
+                              <span class="text-[#3e4451]">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">string</span> <span
+                                 class="text-[#e5c07b]">Message</span>
+                              => <br>
+                              <span class="text-[#3e4451]">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#98b75d]">"</span>
+                              <textarea id="message" name="message" rows="2" placeholder="Write your message here..."
+                                 class="bg-transparent border-none p-0 pl-20 focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-full resize-none font-mono"
+                                 required></textarea>
+                              <span class="text-[#3e4451]">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#98b75d]">"</span>;<br>
+                              <span class="text-[#3e4451]">10</span>&nbsp;&nbsp;&nbsp;<span
+                                 class="text-[#bbbbbb]">}</span><br>
+                              <div class="g-recaptcha mt-4" data-sitekey="6LepS1srAAAAAEQQ92H13yql-o0eh4UTHwZITZRA" data-theme="dark"></div>
+                              <button type="submit" id="submit"
+                                 class="mt-4 inline-flex items-center justify-center gap-2 bg-[#282c34] hover:bg-[#3a3f4b] text-[#8ee48e] px-8 py-2 rounded transition duration-200 border border-[#404552] font-mono">
+                                 <span id="submit-text" class="flex items-center gap-2">
+                                    <i class="bi bi-caret-right-fill"></i> Run
+                                 </span>
+                                 <svg id="spinner" class="w-6 h-6 animate-spin hidden"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                       stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                       d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                                 </svg>
+                              </button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="w-full rounded-b-lg shadow-sm border border-[#404551]">
+               <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center md:justify-between">
+                  <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                     <li>
+                        <span href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
+                           </i></span>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300 scale-105"><i
+                              class="bi bi-linkedin"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                              class="bi bi-instagram"></i></a>
+                     </li>
+                  </ul>
+                  <ul>
+                     <li>
+                        <a href="#"
+                           class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                              class="bi bi-github"></i> @ant1po1e</a>
+                     </li>
+                  </ul>
+               </div>
+            </footer>
          </div>
       </section>
-
-      <!-- Footer -->
-      <footer
-         class="fixed bottom-0 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-wrap items-center justify-center gap-6">
-         <div class="w-full bg-white bg-opacity-50 backdrop-blur-md rounded-lg p-6 shadow-lg flex gap-5 md:gap-12">
-            <p class="font-merienda">
-               <a href="/projects/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300"
-                  aria-label="Projects">
-                  PROJECTS
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="/tools/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  TOOLS
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="/contact/"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  CONTACT
-               </a>
-            </p>
-            <p class="font-merienda">
-               <a href="https://ant1po1e.itch.io"
-                  class="text-black text-base md:text-2xl relative md:hover:text-blue-400 rounded-md p-0 md:hover:py-1 md:hover:px-2 md:hover:bg-white transition-all duration-300">
-                  ITCH.IO
-               </a>
-            </p>
-         </div>
-      </footer>
    </main>
 
+   <script src="/dist/js/script.js"></script>
    <script src="/dist/js/contact.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

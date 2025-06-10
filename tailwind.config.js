@@ -10,6 +10,7 @@ module.exports = {
       'index.html',
       './about/index.html',
       './projects/index.html',
+      './contact/index.html',
       './dist/js/*.js',
       './dist/flowbite/**/*.js'
     ],
