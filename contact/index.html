@@ -32,38 +32,36 @@
    <title>ant1po1e | Home</title>
 </head>
 
-<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none">
+<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none font-mono">
    <div class="absolute inset-0 bg-[#16191d] backdrop-blur-[10px]"></div>
    <main class="relative w-screen h-screen flex justify-center items-center z-10 mx-auto">
       <!-- Main Section -->
       <section class="w-full h-full p-0 md:p-12 flex flex-col justify-center items-center">
          <div class="w-full h-full bg-[#282c34] bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg flex flex-col">
             <!-- Navbar -->
-            <nav class="rounded-t-lg border border-[#404551]">
+            <nav class="md:rounded-t-lg border border-[#404551]">
                <div class="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
-                  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                  <div class="hidden w-full mb-5 md:mb-0 md:block md:w-auto" id="navbar-default">
+                     <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                         <li>
-                           <a href="#"
-                              class="block py-2 px-3 border-r rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300"
-                              aria-current="page">ant1po1e.sln</a>
+                           <a href="/"
+                              class="block py-2 px-3 md:border-r md:rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300">ant1po1e.sln</a>
                         </li>
                         <li>
                            <a href="/about"
-                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
+                           class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
                         </li>
                         <li>
                            <a href="/projects"
-                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                           class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                        </li>
+                        <li>
+                           <a href="/contact"
+                              class="block py-2 px-3 md:border-r border-[#404551] shadow-[inset_0_-3px_0_0_rgba(92,65,139)] text-white bg-[#282c34]">contact.sln</a>
                         </li>
                      </ul>
                   </div>
-                  <ul>
-                     <li>
-                        <a href="/contact"
-                           class="block py-2 px-3  shadow-[inset_0_-3px_0_0_rgba(92,65,139)] bg-[#282c34] border-l border-[#404551] text-white">contact.sln</a>
-                     </li>
-                  </ul>
+                  <a href="/contact" class="block md:hidden py-2 px-3 text-white" aria-current="page">contact.sln</a>
                   <button data-collapse-toggle="navbar-default" type="button"
                      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
                      aria-controls="navbar-default" aria-expanded="false">
@@ -80,7 +78,7 @@
             <!-- Content -->
             <section class="flex flex-grow justify-start items-stretch text-start">
                <!-- Sidebar -->
-               <aside class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85] font-mono">
+               <aside class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85]">
                   <div class="p-4 shadow-[inset_3px_0_0_0_rgba(92,65,139)] bg-[#282c34]">
                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
                         class="text-[24px] text-white hover:cursor-pointer" height="1em" width="1em"
@@ -101,7 +99,7 @@
                   </div>
                </aside>
 
-               <aside class="w-56 min-h-full border-r text-[#7c7f85] border-[#404551] font-mono">
+               <aside class="w-56 min-h-full border-r text-[#7c7f85] border-[#404551]">
                   <!-- Accordion Item: personal-info -->
                   <div data-group="main">
                      <button onclick="toggleAccordion('accordion-1', this)"
@@ -123,7 +121,7 @@
                <div class="flex-1 flex flex-col">
                   <div class="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]"
                      id="navbar-default">
-                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                     <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                         <li>
                            <span class="inline-block py-2 px-3" id="content-title">contact.cs</span> <a href="/"
                               class="hover:text-white transition duration-300 border-r border-[#404551] inline-block py-2 px-3"><i
@@ -135,10 +133,10 @@
                   <!-- Contact Content -->
                   <div class="flex-grow justify-start items-start text-base text-start p-10 h-0 overflow-auto"
                      id="about-content">
-                     <div class="text-start font-mono">
+                     <div class="text-start">
                         <div class="flex flex-wrap justify-start mt-3">
                            <form name="Ant1po1e-contact-form"
-                              class="text-[#5c6370] text-base mb-5 font-mono leading-relaxed">
+                              class="text-[#5c6370] text-base mb-5 leading-relaxed">
                               <span class="text-[#3e4451]">1</span>&nbsp;&nbsp;&nbsp;// Contact me<br>
                               <span class="text-[#3e4451]">2</span>&nbsp;&nbsp;&nbsp;<span
                                  class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">class</span> <span
@@ -164,7 +162,7 @@
                               <span class="text-[#3e4451]">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
                                  class="text-[#98b75d]">"</span>
                               <textarea id="message" name="message" rows="2" placeholder="Write your message here..."
-                                 class="bg-transparent border-none p-0 pl-20 focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-full resize-none font-mono"
+                                 class="bg-transparent border-none p-0 pl-20 focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-full resize-none"
                                  required></textarea>
                               <span class="text-[#3e4451]">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
                                  class="text-[#98b75d]">"</span>;<br>
@@ -174,7 +172,7 @@
                                  data-theme="dark" data-callback="onRecaptchaSuccess"
                                  data-expired-callback="onRecaptchaExpired"></div>
                               <button type="submit" id="submit"
-                                 class="mt-4 inline-flex items-center justify-center gap-2 bg-[#282c34] hover:bg-[#3a3f4b] text-[#8ee48e] px-8 py-2 rounded transition duration-200 border border-[#404552] font-mono">
+                                 class="mt-4 inline-flex items-center justify-center gap-2 bg-[#282c34] hover:bg-[#3a3f4b] text-[#8ee48e] px-8 py-2 rounded transition duration-200 border border-[#404552]">
                                  <span id="submit-text" class="flex items-center gap-2">
                                     <i class="bi bi-caret-right-fill"></i> Run
                                  </span>
@@ -196,7 +194,7 @@
             <!-- Footer -->
             <footer class="w-full rounded-b-lg shadow-sm border border-[#404551]">
                <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center md:justify-between">
-                  <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                  <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                      <li>
                         <span
                            class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:

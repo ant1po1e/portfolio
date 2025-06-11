@@ -107,25 +107,25 @@ fetch('../dist/data/experience.json')
         let lineNum = 1;
         const addLine = (text) => {
             lines.push(
-                `<span class="text-[#3e4451]">${lineNum.toString().padStart(2, '\u00a0')}</span>&nbsp;&nbsp;&nbsp;${text}<br>`
+                `<span class="text-[#3e4451] mr-8">${lineNum.toString().padStart(2, '\u00a0')}</span>${text}<br>`
             );
             lineNum++;
         };
 
         addLine('<span class="text-[#5c6370]">// Work Experience</span>', 1);
         addLine('<span class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">class</span> <span class="text-[#61afef]">Experience</span> <span class="text-[#bbbbbb]">{</span>');
-        addLine('&nbsp;&nbsp;&nbsp;<span class="text-[#c677d1]">public</span> <span class="text-[#c677d1]">List</span>&lt;<span class="text-[#61afef]">Job</span>&gt; <span class="text-[#e5c07b]">Jobs</span> =&gt; <span class="text-[#c678dd]">new</span>() <span class="text-[#bbbbbb]">{</span>');
+        addLine('<span class="text-[#c677d1] ml-8">public</span> <span class="text-[#c677d1]">List</span>&lt;<span class="text-[#61afef]">Job</span>&gt; <span class="text-[#e5c07b]">Jobs</span> =&gt; <span class="text-[#c678dd]">new</span>() <span class="text-[#bbbbbb]">{</span>');
 
         data.forEach((job, index) => {
-            addLine('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#bbbbbb]">{</span>');
-            addLine(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#d19a66]">Company</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.company}</span><span class="text-[#98b75d]">"</span>,`);
-            addLine(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#d19a66]">Type</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.type}</span><span class="text-[#98b75d]">"</span>,`);
-            addLine(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#d19a66]">Period</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.period}</span><span class="text-[#98b75d]">"</span>,`);
-            addLine(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#d19a66]">Role</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.role}</span><span class="text-[#98b75d]">"</span>`);
-            addLine(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#bbbbbb]">}${index < data.length - 1 ? ',' : ''}</span>`);
+            addLine('<span class="text-[#bbbbbb] ml-16">{</span>');
+            addLine(`<span class="text-[#d19a66] ml-24">Company</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.company}</span><span class="text-[#98b75d]">"</span>,`);
+            addLine(`<span class="text-[#d19a66] ml-24">Type</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.type}</span><span class="text-[#98b75d]">"</span>,`);
+            addLine(`<span class="text-[#d19a66] ml-24">Period</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.period}</span><span class="text-[#98b75d]">"</span>,`);
+            addLine(`<span class="text-[#d19a66] ml-24">Role</span>: <span class="text-[#98b75d]">"</span><span class="text-[#98b75d]">${job.role}</span><span class="text-[#98b75d]">"</span>`);
+            addLine(`<span class="text-[#bbbbbb] ml-16">}${index < data.length - 1 ? ',' : ''}</span>`);
         });
 
-        addLine('&nbsp;&nbsp;<span class="text-[#bbbbbb]">};</span>');
+        addLine('<span class="text-[#bbbbbb] ml-8">};</span>');
         addLine('<span class="text-[#bbbbbb]">}</span>');
         lines.push('</h2>');
 

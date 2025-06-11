@@ -29,43 +29,42 @@
     <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>ant1po1e | Home</title>
+    <title>ant1po1e | About</title>
 </head>
 
-<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none">
+<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none font-mono">
     <div class="absolute inset-0 bg-[#16191d] backdrop-blur-[10px]"></div>
     <main class="relative w-screen h-screen flex justify-center items-center z-10 mx-auto">
         <!-- Main Section -->
         <section class="w-full h-full p-0 md:p-12 flex flex-col justify-center items-center">
             <div class="w-full h-full bg-[#282c34] bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg flex flex-col">
                 <!-- Navbar -->
-                <nav class="rounded-t-lg border border-[#404551]">
+                <nav class="md:rounded-t-lg border border-[#404551]">
                     <div class="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
-                        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                            <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <div class="hidden w-full mb-5 md:mb-0 md:block md:w-auto" id="navbar-default">
+                            <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                                 <li>
                                     <a href="/"
-                                        class="block py-2 px-3 border-r rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300">ant1po1e.sln</a>
+                                        class="block py-2 px-3 md:border-r md:rounded-tl-lg border-[#404551] pr-12 text-[#7c7f85] hover:text-white transition duration-300">ant1po1e.sln</a>
                                 </li>
                                 <li>
                                     <a href="/about"
-                                        class="block py-2 px-3 border-r shadow-[inset_0_-3px_0_0_rgba(92,65,139)] border-[#404551] bg-[#282c34] text-white"
+                                        class="block py-2 px-3 md:border-r border-[#404551] shadow-[inset_0_-3px_0_0_rgba(92,65,139)] text-white bg-[#282c34]"
                                         aria-current="page">about.sln</a>
                                 </li>
                                 <li>
                                     <a href="/projects"
-                                        class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                                        class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                                </li>
+                                <li>
+                                    <a href="/contact"
+                                        class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">contact.sln</a>
                                 </li>
                             </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <a href="/contact"
-                                    class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">contact.sln</a>
-                            </li>
-                        </ul>
+                        <a href="/about" class="block md:hidden py-2 px-3 text-white" aria-current="page">about.sln</a>
                         <button data-collapse-toggle="navbar-default" type="button"
-                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-[#3f4450] focus:ring-gray-600"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
                             aria-controls="navbar-default" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -78,9 +77,10 @@
                 </nav>
 
                 <!-- Content -->
-                <section class="flex flex-grow justify-start items-stretch text-start">
+                <section
+                    class="flex flex-col md:flex-row flex-grow justify-start items-stretch text-start overflow-auto md:overflow-none">
                     <!-- Sidebar -->
-                    <aside class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85] font-mono">
+                    <div class="min-h-full text-2xl border-r border-l border-[#404551] text-[#7c7f85] hidden md:block">
                         <div class="p-4 shadow-[inset_3px_0_0_0_rgba(92,65,139)] bg-[#282c34]">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
                                 class="text-[24px] text-white hover:cursor-pointer" height="1em" width="1em"
@@ -99,9 +99,10 @@
                                 </path>
                             </svg>
                         </div>
-                    </aside>
+                    </div>
 
-                    <aside class="w-56 min-h-full border-r text-[#7c7f85] border-[#404551] font-mono">
+                    <div
+                        class="w-full md:w-56 md:min-h-full border-b md:border-b-0 md:border-r text-[#7c7f85] border-[#404551]">
                         <!-- Accordion Item: personal-info -->
                         <div data-group="main">
                             <button onclick="toggleAccordion('accordion-1', this)"
@@ -187,13 +188,12 @@
                                 </div>
                             </div>
                         </div>
-                    </aside>
+                    </div>
 
                     <!-- Content Panel -->
                     <div class="flex-1 flex flex-col">
-                        <div class="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]"
-                            id="navbar-default">
-                            <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                        <div class="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]">
+                            <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                                 <li>
                                     <span class="inline-block py-2 px-3" id="content-title">about.cs</span> <a href="/"
                                         class="hover:text-white transition duration-300 border-r border-[#404551] inline-block py-2 px-3"><i
@@ -203,53 +203,54 @@
                         </div>
 
                         <!-- About Content -->
-                        <div class="flex-grow justify-start items-start text-base text-start p-10" id="about-content">
-                            <div class="text-start font-mono">
+                        <div class="flex-grow justify-start items-start text-sm md:text-base text-start p-4 md:p-10"
+                            id="about-content">
+                            <div class="text-start overflow-x-auto whitespace-nowrap">
                                 <div class="flex flex-wrap justify-start mt-3">
-                                    <h2 class="text-[#5c6370] text-base mb-5 font-mono leading-relaxed">
-                                        <span class="text-[#3e4451]">1</span>&nbsp;&nbsp;&nbsp;// About me<br>
-                                        <span class="text-[#3e4451]">2</span>&nbsp;&nbsp;&nbsp;<span
+                                    <h2 class="text-[#5c6370] text-sm md:text-base mb-5 leading-relaxed">
+                                        <span class="text-[#3e4451] mr-8">1</span>// About me<br>
+                                        <span class="text-[#3e4451] mr-8">2</span><span
                                             class="text-[#c677d1]">public</span> <span
                                             class="text-[#c677d1]">class</span> <span
                                             class="text-[#61afef]">About</span> <span
                                             class="text-[#bbbbbb]">{</span><br>
-                                        <span class="text-[#3e4451]">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#c677d1]">public</span> <span
-                                            class="text-[#c677d1]">string</span> <span
+                                        <span class="text-[#3e4451] mr-8">3</span><span class=mr-8"></span><span
+                                            class="text-[#c677d1] ml-8">public</span>
+                                        <span class="text-[#c677d1]">string</span> <span
                                             class="text-[#e5c07b]">Role</span> => <span class="text-[#98b75d]">"Web
                                             Developer & Game Developer"</span>;<br>
-                                        <span class="text-[#3e4451]">4</span><br>
-                                        <span class="text-[#3e4451]">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#c677d1]">public</span> <span
-                                            class="text-[#c677d1]">string</span> <span class="text-[#e5c07b]">Bio</span>
+                                        <span class="text-[#3e4451] mr-8">4</span><br>
+                                        <span class="text-[#3e4451] mr-8">5</span><span class=mr-8"></span><span
+                                            class="text-[#c677d1] ml-8">public</span>
+                                        <span class="text-[#c677d1]">string</span> <span
+                                            class="text-[#e5c07b]">Bio</span>
                                         => <br>
-                                        <span
-                                            class="text-[#3e4451]">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#98b75d]">"I create websites and games that are not only
+                                        <span class="text-[#3e4451] mr-8">6</span><span class=mr-8"></span><span
+                                            class="text-[#98b75d] ml-16">"I create
+                                            websites and games that are not only
                                             functional "</span> +<br>
-                                        <span
-                                            class="text-[#3e4451]">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#98b75d]">"but also visually appealing. My passion for coding
+                                        <span class="text-[#3e4451] mr-8">7</span><span class=mr-8"></span><span
+                                            class="text-[#98b75d] ml-16">"but also
+                                            visually appealing. My passion for coding
                                             and design "</span> +<br>
-                                        <span
-                                            class="text-[#3e4451]">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#98b75d]">"drives me to constantly learn and improve my skills,
+                                        <span class="text-[#3e4451] mr-8">8</span><span class=mr-8"></span><span
+                                            class="text-[#98b75d] ml-16">"drives me to
+                                            constantly learn and improve my skills,
                                             delivering "</span> +<br>
-                                        <span
-                                            class="text-[#3e4451]">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#98b75d]">"creative and efficient solutions for every project I
+                                        <span class="text-[#3e4451] mr-8">9</span><span class=mr-8"></span><span
+                                            class="text-[#98b75d] ml-16">"creative and
+                                            efficient solutions for every project I
                                             undertake."</span>;<br>
-                                        <span class="text-[#3e4451]">10</span>&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#bbbbbb]">}</span>
+                                        <span class="text-[#3e4451] mr-8">10</span><span class="text-[#bbbbbb]">}</span>
                                     </h2>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Experience Content -->
-                        <div class="flex-grow justify-start items-start text-base text-start hidden p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
+                        <div class="flex-grow justify-start items-start text-sm md:text-base text-start hidden p-4 md:p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
                             id="experience-content">
-                            <div class="text-start font-mono">
+                            <div class="text-start overflow-x-auto whitespace-nowrap">
                                 <div id="experience-section" class="flex flex-wrap justify-start mt-3">
                                     <!-- JavaScript akan inject konten di sini -->
                                 </div>
@@ -257,75 +258,69 @@
                         </div>
 
                         <!-- Education Content -->
-                        <div class="flex-grow justify-start items-start text-base text-start hidden p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
+                        <div class="flex-grow justify-start items-start text-sm md:text-base text-start hidden p-4 md:p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
                             id="education-content">
-                            <div class="text-start font-mono">
+                            <div class="text-start overflow-x-auto whitespace-nowrap">
                                 <div class="flex flex-wrap justify-start mt-3">
-                                    <h2 class="text-[#5c6370] text-base mb-5 font-mono leading-relaxed">
-                                        <span class="text-[#3e4451]">1</span>&nbsp;&nbsp;&nbsp;// Education<br>
-                                        <span class="text-[#3e4451]">2</span>&nbsp;&nbsp;&nbsp;<span
+                                    <h2 class="text-[#5c6370] text-sm md:text-base mb-5 leading-relaxed">
+                                        <span class="text-[#3e4451] mr-8">1</span>// Education<br>
+                                        <span class="text-[#3e4451] mr-8">2</span><span
                                             class="text-[#c678dd]">public</span> <span
                                             class="text-[#c678dd]">record</span> <span
                                             class="text-[#61afef]">Education</span> <span
                                             class="text-[#bbbbbb]">{</span><br>
-
-                                        <span class="text-[#3e4451]">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#c677d1]">public</span> <span
+                                        <span class="text-[#3e4451] mr-8">3</span><span
+                                            class="text-[#c677d1] ml-8">public</span> <span
                                             class="text-[#c677d1]">List</span>
                                         <<span class="text-[#61afef]">School</span>> <span
                                                 class="text-[#e5c07b]">Schools</span> => <span
                                                 class="text-[#c678dd]">new</span>() <span
                                                 class="text-[#bbbbbb]">{</span><br>
-
-                                            <span
-                                                class="text-[#3e4451]">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#bbbbbb]">{</span><br>
-                                            <span
-                                                class="text-[#3e4451]">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#d19a66]">Level</span>: <span
+                                            <span class="text-[#3e4451] mr-8">4</span><span
+                                                class="text-[#bbbbbb] ml-16">{</span><br>
+                                            <span class="text-[#3e4451] mr-8">5</span><span
+                                                class="text-[#d19a66] ml-24">Level</span>: <span
                                                 class="text-[#98b75d]">"Vocational High School"</span>,<br>
-                                            <span
-                                                class="text-[#3e4451]">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#d19a66]">Name</span>: <span class="text-[#98b75d]">"SMK
+                                            <span class="text-[#3e4451] mr-8">6</span><span
+                                                class="text-[#d19a66] ml-24">Name</span>: <span
+                                                class="text-[#98b75d]">"SMK
                                                 Muhammadiyah 1 Sukoharjo"</span>,<br>
-                                            <span
-                                                class="text-[#3e4451]">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#d19a66]">Major</span>: <span
+                                            <span class="text-[#3e4451] mr-8">7</span><span
+                                                class="text-[#d19a66] ml-24">Major</span>: <span
                                                 class="text-[#98b75d]">"Software Engineering"</span>,<br>
-                                            <span
-                                                class="text-[#3e4451]">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#d19a66]">Period</span>: <span class="text-[#98b75d]">"2022
+                                            <span class="text-[#3e4451] mr-8">8</span><span
+                                                class="text-[#d19a66] ml-24">Period</span>: <span
+                                                class="text-[#98b75d]">"2022
                                                 - 2025"</span><br>
-                                            <span
-                                                class="text-[#3e4451]">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#bbbbbb]">},</span><br>
+                                            <span class="text-[#3e4451] mr-8">9</span><span
+                                                class="text-[#bbbbbb] ml-16">}</span><br>
                                             <!-- 
                                             <span
-                                                class="text-[#3e4451]">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">10</span><span
                                                 class="text-[#bbbbbb]">{</span><br>
                                             <span
-                                                class="text-[#3e4451]">11</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">11</span><span
                                                 class="text-[#d19a66]">Level</span>: <span
                                                 class="text-[#98b75d]">"Vocational High School"</span>,<br>
                                             <span
-                                                class="text-[#3e4451]">12</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">12</span><span
                                                 class="text-[#d19a66]">Name</span>: <span class="text-[#98b75d]">"SMK
                                                 Negeri 1 Surabaya"</span>,<br>
                                             <span
-                                                class="text-[#3e4451]">13</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">13</span><span
                                                 class="text-[#d19a66]">Major</span>: <span
                                                 class="text-[#98b75d]">"Software Engineering"</span>,<br>
                                             <span
-                                                class="text-[#3e4451]">14</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">14</span><span
                                                 class="text-[#d19a66]">Period</span>: <span class="text-[#98b75d]">"2015
                                                 - 2018"</span><br>
                                             <span
-                                                class="text-[#3e4451]">15</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="text-[#3e4451] mr-8">15</span><span
                                                 class="text-[#bbbbbb]">}</span><br> -->
 
-                                            <span class="text-[#3e4451]">10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                                class="text-[#bbbbbb]">};</span><br>
-                                            <span class="text-[#3e4451]">11</span>&nbsp;&nbsp;&nbsp;<span
+                                            <span class="text-[#3e4451] mr-8">10</span><span
+                                                class="text-[#bbbbbb] ml-8">};</span><br>
+                                            <span class="text-[#3e4451] mr-8">11</span><span
                                                 class="text-[#bbbbbb]">}</span>
                                     </h2>
                                 </div>
@@ -333,74 +328,71 @@
                         </div>
 
                         <!-- CV Content -->
-                        <div class="flex-grow justify-start items-start text-base text-start hidden p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
+                        <div class="flex-grow justify-start items-start text-sm md:text-base text-start hidden p-4 md:p-10 h-0 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]"
                             id="cv-content">
                             <iframe src="../dist/pdfjs/web/viewer.html?file=/dist/img/cv.pdf" width="100%"
                                 height="800px"></iframe>
                         </div>
 
                         <!-- Contact Content -->
-                        <div class="flex-grow justify-start items-start text-base text-start p-10 hidden"
+                        <div class="flex-grow justify-start items-start text-sm md:text-base text-start p-4 md:p-10 hidden"
                             id="contact-content">
-                            <div class="text-start font-mono">
+                            <div class="text-start overflow-x-auto whitespace-nowrap">
                                 <div class="flex flex-wrap justify-start mt-3">
-                                    <h2 class="text-[#5c6370] text-base mb-5 font-mono leading-relaxed">
-                                        <span class="text-[#3e4451]">1</span>&nbsp;&nbsp;&nbsp;//
+                                    <h2 class="text-[#5c6370] text-sm md:text-base mb-5 leading-relaxed">
+                                        <span class="text-[#3e4451] mr-8">1</span>//
                                         Contact
                                         Information<br>
-                                        <span class="text-[#3e4451]">3</span>&nbsp;&nbsp;&nbsp;<span
+                                        <span class="text-[#3e4451] mr-8">3</span><span
                                             class="text-[#c678dd]">public</span> <span
                                             class="text-[#c678dd]">static</span> <span
                                             class="text-[#c678dd]">class</span> <span
                                             class="text-[#61afef]">Contact</span> <span
                                             class="text-[#bbbbbb]">{</span><br>
-
-                                        <span class="text-[#3e4451]">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#c678dd]">public</span> <span
+                                        <span class="text-[#3e4451] mr-8">4</span><span
+                                            class="text-[#c678dd] ml-8">public</span> <span
                                             class="text-[#c678dd]">const</span> <span
                                             class="text-[#c678dd]">string</span> <span
                                             class="text-[#d19a66]">Email</span> = <span
                                             class="text-[#98b75d]">"apolantipole@gmail.com"</span>;<br>
-                                        <span class="text-[#3e4451]">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#c678dd]">public</span> <span
+                                        <span class="text-[#3e4451] mr-8">5</span><span
+                                            class="text-[#c678dd] ml-8">public</span> <span
                                             class="text-[#c678dd]">const</span> <span
                                             class="text-[#c678dd]">string</span> <span
                                             class="text-[#d19a66]">Discord</span> = <span
                                             class="text-[#98b75d]">"antipole</span>;<br>
-                                        <span class="text-[#3e4451]">6</span>&nbsp;&nbsp;&nbsp;<span
-                                            class="text-[#bbbbbb]">}</span>
+                                        <span class="text-[#3e4451] mr-8">6</span><span class="text-[#bbbbbb]">}</span>
                                     </h2>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
 
                 <!-- Footer -->
-                <footer class="w-full rounded-b-lg shadow-sm border border-[#404551]">
-                    <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center md:justify-between">
-                        <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                <footer class="w-full md:rounded-b-lg shadow-sm border border-[#404551]">
+                    <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center justify-between flex">
+                        <ul class="font-medium flex flex-row rtl:space-x-reverse py-3 md:py-0">
                             <li>
                                 <span
-                                    class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
+                                    class="md:block py-2 px-4 md:border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
                                     </i></span>
                             </li>
                             <li>
                                 <a href="linkedin.com/in/apriansyah-yudha-pratama-805795265/"
-                                    class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300 scale-105"><i
+                                    class="md:block py-2 md:px-4 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                                         class="bi bi-linkedin"></i></a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/antipole.dev/"
-                                    class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                                    class="md:block py-2 px-4 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                                         class="bi bi-instagram"></i></a>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="py-3 md:py-0">
                             <li>
                                 <a href="https://github.com/ant1po1e"
-                                    class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                                    class="md:block py-2 px-3 md:border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                                         class="bi bi-github"></i> @ant1po1e</a>
                             </li>
                         </ul>
@@ -410,7 +402,8 @@
         </section>
     </main>
 
-    <script src="/dist/js/script.js"></script>
+    <script src="../dist/js/script.js"></script>
+    <script src="../dist/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>

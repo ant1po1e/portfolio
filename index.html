@@ -32,38 +32,37 @@
    <title>ant1po1e | Home</title>
 </head>
 
-<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none">
+<body class="relative min-h-screen bg-[#16191d] overflow-x-hidden select-none font-mono">
    <div class="absolute inset-0 bg-[#16191d] backdrop-blur-[10px]"></div>
    <main class="relative w-screen h-screen flex justify-center items-center z-10 mx-auto">
       <!-- Main Section -->
       <section class="w-full h-full p-0 md:p-12 flex flex-col justify-center items-center">
          <div class="w-full h-full bg-[#282c34] bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg flex flex-col">
             <!-- Navbar -->
-            <nav class="rounded-t-lg border border-[#404551]">
+            <nav class="md:rounded-t-lg border border-[#404551]">
                <div class="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
-                  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                     <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+                  <div class="hidden w-full mb-5 md:mb-0 md:block md:w-auto" id="navbar-default">
+                     <ul class="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
                         <li>
-                           <a href="#"
-                              class="block py-2 px-3 border-r shadow-[inset_0_-3px_0_0_rgba(92,65,139)] rounded-tl-lg border-[#404551] pr-12 text-white bg-[#282c34]"
+                           <a href="/"
+                              class="block py-2 px-3 md:border-r shadow-[inset_0_-3px_0_0_rgba(92,65,139)] md:rounded-tl-lg border-[#404551] pr-12 text-white bg-[#282c34]"
                               aria-current="page">ant1po1e.sln</a>
                         </li>
                         <li>
                            <a href="/about"
-                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
+                              class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">about.sln</a>
                         </li>
                         <li>
                            <a href="/projects"
-                              class="block py-2 px-3 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                              class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">projects.sln</a>
+                        </li>
+                        <li>
+                           <a href="/contact"
+                              class="block py-2 px-3 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">contact.sln</a>
                         </li>
                      </ul>
                   </div>
-                  <ul>
-                     <li>
-                        <a href="/contact"
-                           class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300">contact.sln</a>
-                     </li>
-                  </ul>
+                  <a href="/" class="block md:hidden py-2 px-3 text-white" aria-current="page">ant1po1e.sln</a>
                   <button data-collapse-toggle="navbar-default" type="button"
                      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
                      aria-controls="navbar-default" aria-expanded="false">
@@ -78,12 +77,12 @@
             </nav>
 
             <!-- Content -->
-            <section class="flex flex-grow justify-center items-center text-center p-10">
-               <div class="mx-auto text-start font-mono w-1/2">
-                  <h1 class="text-white text-7xl">
+            <section class="flex flex-col md:flex-row flex-grow justify-center items-center p-10">
+               <div class="mx-auto text-start w-full md:w-1/2">
+                  <h1 class="text-white text-4xl md:text-7xl">
                      Yudha Pratama</h1>
                   <div class="flex flex-wrap justify-start mt-3 text-xl md:text-3xl">
-                     <span id="typewriter" class="font-mono text-[#c677d1]"></span><span id="cursor"
+                     <span id="typewriter" class="text-[#c677d1]"></span><span id="cursor"
                         class="text-white font-bold">|</span>
                   </div>
                   <div class="flex flex-wrap justify-start mt-3">
@@ -101,7 +100,7 @@
                </div>
                <div class="mx-auto">
                   <div
-                     class="relative w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden shadow-xl border border-[#404551] bg-[#282c34] backdrop-blur-sm font-mono">
+                     class="relative w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden shadow-xl border border-[#404551] bg-[#282c34] backdrop-blur-sm">
                      <div class="flex items-center space-x-2 px-3 py-2 bg-[#282c34] border-b border-[#404551]">
                         <span class="w-3 h-3 bg-red-500 rounded-full"></span>
                         <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
@@ -115,29 +114,29 @@
             </section>
 
             <!-- Footer -->
-            <footer class="w-full rounded-b-lg shadow-sm border border-[#404551]">
-               <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center md:justify-between">
-                  <ul class="font-medium font-mono flex flex-col md:flex-row rtl:space-x-reverse">
+            <footer class="w-full md:rounded-b-lg shadow-sm border border-[#404551]">
+               <div class="w-full mx-auto min-w-screen-2xl md:flex md:items-center justify-between flex">
+                  <ul class="font-medium flex flex-row rtl:space-x-reverse py-3 md:py-0">
                      <li>
                         <span
-                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
+                           class="md:block py-2 px-4 md:border-r border-[#404551] text-[#7c7f85] transition duration-300">Socials:
                            </i></span>
                      </li>
                      <li>
                         <a href="linkedin.com/in/apriansyah-yudha-pratama-805795265/"
-                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300 scale-105"><i
+                           class="md:block py-2 md:px-4 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                               class="bi bi-linkedin"></i></a>
                      </li>
                      <li>
                         <a href="https://www.instagram.com/antipole.dev/"
-                           class="block py-2 px-4 border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                           class="md:block py-2 px-4 md:border-r border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                               class="bi bi-instagram"></i></a>
                      </li>
                   </ul>
-                  <ul>
+                  <ul class="py-3 md:py-0">
                      <li>
                         <a href="https://github.com/ant1po1e"
-                           class="block py-2 px-3 border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
+                           class="md:block py-2 px-3 md:border-l border-[#404551] text-[#7c7f85] hover:text-white transition duration-300"><i
                               class="bi bi-github"></i> @ant1po1e</a>
                      </li>
                   </ul>
@@ -148,6 +147,7 @@
    </main>
 
    <script src="/dist/js/script.js"></script>
+   <script src="/dist/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
