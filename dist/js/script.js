@@ -144,7 +144,7 @@ fetch('../dist/data/projects.json')
         data.forEach(project => {
             const card = document.createElement('div');
             card.className =
-                'relative w-[48%] rounded-xl overflow-hidden shadow-xl border border-[#404551] bg-[#282c34]] backdrop-blur-sm font-mono';
+                'relative w-full md:w-[48%] rounded-xl overflow-hidden shadow-xl border border-[#404551] bg-[#282c34]] backdrop-blur-sm font-mono';
 
             card.innerHTML = `
         <div class="flex items-center space-x-2 px-3 py-2 border-b border-[#404551] bg-[#282c34]">
@@ -155,7 +155,7 @@ fetch('../dist/data/projects.json')
         </div>
         <div class="relative group">
             <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover transition duration-300" />
-            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 md:group-hover:opacity-100 transition duration-300">
                 <div class="bg-white bg-opacity-70 px-4 py-4 rounded">
                 <img src="https://skillicons.dev/icons?i=${project.stack}" alt="Stack">
                 </div>
@@ -163,10 +163,10 @@ fetch('../dist/data/projects.json')
         </div>
 
         <div class="p-4 font-mono text-white">
-            <h4 class="font-bold text-lg mb-1">${project.title}</h4>
-            <p class="text-[#7c7f85] text-base">${project.desc}</p>
+            <h4 class="font-bold text-base md:text-lg mb-1">${project.title}</h4>
+            <p class="text-[#7c7f85] text-sm md:text-base">${project.desc}</p>
         <a href="${project.url}" target="_blank"
-                                    class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded md:hover:pl-10 md:hover:pr-6 group">View Project
+                                    class="relative flex text-sm md:text-base items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded md:hover:pl-10 md:hover:pr-6 group">View Project
                                     <span
                                         class="absolute left-0 pl-2.5 -translate-x-12 md:group-hover:translate-x-0 ease-out duration-200">
                                         >
