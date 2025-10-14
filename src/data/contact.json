@@ -1,0 +1,23 @@
+[
+	[{ "text": "// Contact Information", "cls": "code-gray" }],
+	[
+		{ "text": "public static class ", "cls": "code-pink" },
+		{ "text": "Contact ", "cls": "code-blue" },
+		{ "text": "{", "cls": "code-default" }
+	],
+	[
+		{ "text": "\tpublic const string ", "cls": "code-pink" },
+		{ "text": "Email ", "cls": "code-orange" },
+		{ "text": "= ", "cls": "code-gray" },
+		{ "text": "\"apolantipole@gmail.com\"", "cls": "code-green" },
+		{ "text": ";", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\tpublic const string ", "cls": "code-pink" },
+		{ "text": "Discord ", "cls": "code-orange" },
+		{ "text": "= ", "cls": "code-gray" },
+		{ "text": "\"antipole\"", "cls": "code-green" },
+		{ "text": ";", "cls": "code-gray" }
+	],
+	[{ "text": "}", "cls": "code-default" }]
+]

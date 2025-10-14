@@ -1,0 +1,199 @@
+[
+	[{ "text": "// Work Experience", "cls": "code-gray" }],
+	[
+		{ "text": "public class ", "cls": "code-pink" },
+		{ "text": "Experience ", "cls": "code-blue" },
+		{ "text": "{", "cls": "code-default" }
+	],
+	[
+		{ "text": "\tpublic List", "cls": "code-pink" },
+		{ "text": "<", "cls": "code-gray" },
+		{ "text": "Job", "cls": "code-blue" },
+		{ "text": "> ", "cls": "code-gray" },
+		{ "text": "Jobs ", "cls": "code-yellow" },
+		{ "text": "=> ", "cls": "code-gray" },
+		{ "text": "new", "cls": "code-pink" },
+		{ "text": "() ", "cls": "code-gray" },
+		{ "text": "{", "cls": "code-default" }
+	],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{
+			"text": "\"Mutuharjo Game Development Department\"",
+			"cls": "code-green"
+		},
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Contract\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Aug 2024 - Present\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Game Development Teacher\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Thousand Dreams Software House\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Contract\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"May 2025 - Present\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"QA & Back End Developer\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Gulanova\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Seasonal\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Sep 2024 - Feb 2025\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Web Developer\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"M-One Solution\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Intership\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"May 2024 - Dec 2024\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Lead Game Developer\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"CV ZAMANNOW\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Apprenticeship\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Aug 2023 - Feb 2024\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Back End Developer\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Time Web Id\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Apprenticeship\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Jul 2023 - Oct 2023\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Back End Developer\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t},", "cls": "code-default" }],
+	[{ "text": "\t\t{", "cls": "code-default" }],
+	[
+		{ "text": "\t\t\tCompany", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"PT. Datenshi Games Indonesia\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tType", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Part-time\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tPeriod", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Jan 2021 - Jan 2022\"", "cls": "code-green" },
+		{ "text": ",", "cls": "code-gray" }
+	],
+	[
+		{ "text": "\t\t\tRole", "cls": "code-orange" },
+		{ "text": ": ", "cls": "code-gray" },
+		{ "text": "\"Moderator\"", "cls": "code-green" }
+	],
+	[{ "text": "\t\t}", "cls": "code-default" }],
+	[{ "text": "\t};", "cls": "code-default" }],
+	[{ "text": "}", "cls": "code-default" }]
+]

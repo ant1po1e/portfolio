@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@plugin "tailwind-scrollbar";
+@source "../.flowbite-react/class-list.json";
+
+body {
+	background: url(/bg.webp);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.code-default {
+	color: #bbbbbb;
+}
+
+.code-gray {
+	color: #5c6370;
+}
+
+.code-pink {
+	color: #c677d1;
+}
+
+.code-blue {
+	color: #61afef;
+}
+
+.code-purple {
+	color: #8f08c4;
+}
+
+.code-green {
+	color: #98b75d;
+}
+
+.code-yellow {
+	color: #e5c07b;
+}
+
+.code-orange {
+	color: #d19a66;
+}
