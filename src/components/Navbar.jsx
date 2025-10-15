@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
 	const location = useLocation();
 	const [activePage, setActivePage] = useState(location.pathname);
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	useEffect(() => {
+		setActivePage(location.pathname);
+	}, [location]);
 
 	const handleToggle = (path) => {
 		setActivePage(path);
+		setMenuOpen(false); // Tutup menu setelah klik link
 	};
 
 	const getLinkClass = (path) =>
@@ -16,12 +22,28 @@ export const Navbar = () => {
 				: "text-[#7c7f85] md:hover:text-white"
 		}`;
 
+	// fungsi untuk menampilkan nama file aktif di mobile
+	const getCurrentPageName = () => {
+		switch (activePage) {
+			case "/about":
+				return "about.sln";
+			case "/projects":
+				return "projects.sln";
+			case "/contact":
+				return "contact.sln";
+			default:
+				return "ant1po1e.sln";
+		}
+	};
+
 	return (
 		<nav className="md:rounded-t-lg border border-[#404551]">
 			<div className="min-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
 				{/* Desktop Navbar */}
 				<div
-					className="hidden w-full mb-5 md:mb-0 md:block md:w-auto"
+					className={`${
+						menuOpen ? "block" : "hidden"
+					} w-full mb-5 md:mb-0 md:block md:w-auto`}
 					id="navbar-default">
 					<ul className="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
 						<li>
@@ -62,36 +84,31 @@ export const Navbar = () => {
 				</div>
 
 				{/* Mobile Navbar */}
-				<Link
-					to="/"
-					onClick={() => handleToggle("/")}
-					className="block md:hidden py-2 px-3 text-white"
-					aria-current="page">
-					ant1po1e.sln
-				</Link>
-
-				<button
-					data-collapse-toggle="navbar-default"
-					type="button"
-					className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 md:hover:bg-gray-700 focus:ring-gray-600"
-					aria-controls="navbar-default"
-					aria-expanded="false">
-					<span className="sr-only">Open main menu</span>
-					<svg
-						className="w-5 h-5"
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 17 14">
-						<path
-							stroke="currentColor"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M1 1h15M1 7h15M1 13h15"
-						/>
-					</svg>
-				</button>
+				<div className="flex items-center justify-between w-full md:hidden px-3 py-2 text-white">
+					<span className="text-white select-none">{getCurrentPageName()}</span>
+					<button
+						type="button"
+						onClick={() => setMenuOpen(!menuOpen)}
+						className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg focus:outline-none focus:ring-2 text-gray-400 md:hover:bg-gray-700 focus:ring-gray-600"
+						aria-controls="navbar-default"
+						aria-expanded={menuOpen}>
+						<span className="sr-only">Open main menu</span>
+						<svg
+							className="w-5 h-5"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 17 14">
+							<path
+								stroke="currentColor"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M1 1h15M1 7h15M1 13h15"
+							/>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</nav>
 	);

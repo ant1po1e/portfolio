@@ -113,7 +113,7 @@ export const AboutSection = () => {
 	};
 
 	return (
-		<div className="flex flex-col md:flex-row flex-grow md:border-none">
+		<div className="flex flex-col md:flex-row flex-grow md:border-none overflow-hidden">
 			{/* Sidebar */}
 			<div className="w-full md:w-56 border-b md:border-b-0 md:border-r border-[#404551] text-[#7c7f85]">
 				<AccordionFolder
@@ -156,7 +156,7 @@ export const AboutSection = () => {
 			</div>
 
 			{/* Content */}
-			<div className="flex-1 flex flex-col">
+			<div className="flex-1 flex flex-col h-[calc(100vh-4rem)] md:h-auto">
 				{/* Dynamic Header (show file name) */}
 				<div className="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]">
 					<ul className="font-medium flex flex-col md:flex-row rtl:space-x-reverse">

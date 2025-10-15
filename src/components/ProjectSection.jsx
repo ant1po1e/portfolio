@@ -130,8 +130,7 @@ export const ProjectSection = () => {
 			</div>
 
 			{/* Content */}
-			<div className="flex-1 flex flex-col">
-				{/* Dynamic Header */}
+			<div className="flex-1 flex flex-col h-[calc(100vh-4rem)] md:h-auto">
 				<div className="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]">
 					<ul className="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
 						<li>

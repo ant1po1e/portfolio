@@ -1,25 +1,21 @@
-// src/fragments/CodeLines.jsx
-import React from "react";
-
-/**
- * CodeLine
- * props:
- *  - number: nomor baris (number)
- *  - children: konten (bisa React nodes)
- *  - highlight (optional): boolean untuk highlight baris
- */
-export const CodeLine = ({ number, children, highlight = false }) => {
+export const CodeLine = ({ number, children }) => {
 	return (
-		<div className="flex items-start">
-			<div className="w-10 text-right select-none pr-4 text-[#3e4451]">
+		<div
+			className="flex items-start font-mono leading-relaxed"
+			style={{
+				tabSize: 4,
+				whiteSpace: "pre-wrap",
+				wordBreak: "break-word",
+			}}>
+			<span
+				className="text-[#3e4451] select-none text-right pr-4"
+				style={{
+					minWidth: "2.5em", 
+					display: "inline-block",
+				}}>
 				{number}
-			</div>
-			<div
-				className={`flex-1 font-mono text-sm md:text-base leading-6 whitespace-pre ${
-					highlight ? "bg-white/5 rounded px-2" : ""
-				}`}>
-				{children}
-			</div>
+			</span>
+			<span className="flex-1">{children}</span>
 		</div>
 	);
 };

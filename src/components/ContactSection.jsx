@@ -69,7 +69,7 @@ export const ContactSection = () => {
 			</div>
 
 			{/* Content Area */}
-			<div className="flex-1 flex flex-col">
+			<div className="flex-1 flex flex-col h-[calc(100vh-4rem)] md:h-auto">
 				{/* File Tab */}
 				<div className="hidden w-full md:block md:w-auto border-b border-[#404551] text-[#7c7f85]">
 					<ul className="font-medium flex flex-col md:flex-row rtl:space-x-reverse">
@@ -85,8 +85,8 @@ export const ContactSection = () => {
 					</ul>
 				</div>
 
-				<div className="flex-grow justify-start items-start text-sm md:text-base text-start p-3 md:p-5 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]">
-					<pre className="mt-3">
+				<div className="flex-grow justify-start items-start text-sm md:text-base text-start p-3 md:p-5 md:overflow-hidden overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]">
+					<pre className="mt-3 w-full">
 						<code className="block">
 							<form
 								ref={formRef}
@@ -115,7 +115,7 @@ export const ContactSection = () => {
 										type="text"
 										placeholder="Your name"
 										required
-										className="bg-transparent border-none p-0 focus:outline-none focus:ring-0 code-green placeholder-[#7f848e] w-1/2 inline-block"
+										className="bg-transparent border-none p-0 text-sm md:text-base font-mono focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-1/4 inline-block"
 									/>
 									<span className="code-green">"</span>
 									<span className="code-gray">;</span>
@@ -136,7 +136,7 @@ export const ContactSection = () => {
 										type="email"
 										placeholder="you@example.com"
 										required
-										className="bg-transparent border-none p-0 focus:outline-none focus:ring-0 code-green placeholder-[#7f848e] w-1/2 inline-block"
+										className="bg-transparent border-none p-0 text-sm md:text-base font-mono focus:outline-none focus:ring-0 text-[#98b75d] placeholder-[#7f848e] w-1/4 inline-block"
 									/>
 									<span className="code-green">"</span>
 									<span className="code-gray">;</span>

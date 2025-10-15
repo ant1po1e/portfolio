@@ -6,7 +6,7 @@ export const HeroSection = () => {
 			<div className="mx-auto text-start w-full md:w-1/2">
 				<h1 className="text-white text-4xl md:text-7xl">Yudha Pratama</h1>
 
-				<div className="flex flex-wrap justify-center md:justify-start mx-auto mt-1 md:mt-3 text-xl md:text-3xl neon">
+				<div className="flex flex-wrap justify-start mx-auto mt-1 md:mt-3 text-xl md:text-3xl neon">
 					<div
 						className="font-mono font-medium code-pink"
 						aria-label="Roles I do">
