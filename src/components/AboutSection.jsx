@@ -176,7 +176,7 @@ export const AboutSection = () => {
 
 				{/* Content Area */}
 				<div className="flex-grow justify-start items-start text-sm md:text-base text-start p-3 md:p-5 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]">
-					<div className="text-start">{content[activeContent]}</div>
+					<div className="text-start md:pb-0 pb-[300px]">{content[activeContent]}</div>
 				</div>
 			</div>
 		</div>

@@ -148,7 +148,7 @@ export const ProjectSection = () => {
 				</div>
 
 				{/* Scrollable Content */}
-				<div className="flex-grow justify-start items-start text-sm md:text-base text-start p-5 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34]">
+				<div className="flex-grow justify-start items-start text-sm md:text-base text-start p-5 overflow-auto scrollbar scrollbar-thumb-white scrollbar-track-[#282c34] md:pb-0 pb-[300px]">
 					{renderContent()}
 				</div>
 			</div>
