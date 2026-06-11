@@ -1,44 +1,29 @@
-@import "tailwindcss";
-@plugin "flowbite-react/plugin/tailwindcss";
-@plugin "tailwind-scrollbar";
-@source "../.flowbite-react/class-list.json";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
 
 body {
 	background: url(/bg.webp);
-	background-size: 100%;
+	-webkit-background-size: cover;
+	background-size: 150%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 }
 
-.code-default {
-	color: #bbbbbb;
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar       { width: 5px; }
+  ::-webkit-scrollbar-track { background: #161B22; }
+  ::-webkit-scrollbar-thumb { background: #30363D; border-radius: 3px; }
 }
 
-.code-gray {
-	color: #5c6370;
-}
-
-.code-pink {
-	color: #c677d1;
-}
-
-.code-blue {
-	color: #61afef;
-}
-
-.code-purple {
-	color: #8f08c4;
-}
-
-.code-green {
-	color: #98b75d;
-}
-
-.code-yellow {
-	color: #e5c07b;
-}
-
-.code-orange {
-	color: #d19a66;
+@media (max-width: 767px) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }
