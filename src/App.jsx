@@ -259,6 +259,7 @@ export default function App() {
                   autoCorrect="off"
                   spellCheck={false}
                   inputMode="text"
+                  aria-label="walawe"
                 />
               </span>
             </div>

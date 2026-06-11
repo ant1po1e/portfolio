@@ -12,7 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
-pnpm-workspace.yaml
+pnpm-workspace.yaml 
 
 # Editor directories and files
 .vscode/*
