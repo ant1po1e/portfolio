@@ -176,7 +176,7 @@ export default function App() {
     // ── Keyboard ──────────────────────────────────────────────────────────────
     const handleKey = (e) => {
         if (e.key === "Tab") {
-            e.preventDefault(); 
+            e.preventDefault();
             if (suggestion) setInput(input + suggestion);
         } else if (e.key === "Escape") {
             setInput("");
@@ -387,6 +387,11 @@ export default function App() {
                                     </span>
                                 )}
                                 {!suggestion && <Cursor />}
+                                <label
+                                    className="sr-only"
+                                    htmlFor="command-input">
+                                    Command input
+                                </label>
                                 <input
                                     ref={inputRef}
                                     value={input}
@@ -394,7 +399,7 @@ export default function App() {
                                     onKeyDown={handleKey}
                                     className="absolute inset-0 bg-transparent border-none outline-none w-full"
                                     style={{
-                                        color: "transparent", 
+                                        color: "transparent",
                                         fontFamily: "inherit",
                                         fontSize: "inherit",
                                         caretColor: "transparent",
