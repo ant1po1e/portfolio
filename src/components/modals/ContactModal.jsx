@@ -1,60 +1,66 @@
+import { useRef, useState } from "react";
 import { C } from "../../data/colors";
 import { CONTACT_DATA } from "../../data/content";
-import { useRef, useState } from "react";
+
+const INPUT_STYLE = {
+    width: "100%",
+    background: "#0D1117",
+    border: `1px solid #21262D`,
+    borderRadius: 6,
+    color: "#E6EDF3",
+    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+    fontSize: "0.8rem",
+    padding: "8px 12px",
+    outline: "none",
+    boxSizing: "border-box",
+};
 
 export default function ContactModal() {
     const formRef = useRef(null);
     const alertRef = useRef(null);
     const [loading, setLoading] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
-
-    const scriptURL = "/api/contact";
+    const [focusedField, setFocused] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-
         try {
-            const form = formRef.current;
-            const formData = new FormData(form);
-
-            const urlEncoded = new URLSearchParams();
-            for (let pair of formData.entries()) {
-                urlEncoded.append(pair[0], pair[1]);
-            }
-
-            const response = await fetch(scriptURL, {
+            const formData = new FormData(formRef.current);
+            const body = new URLSearchParams(formData).toString();
+            const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
-                body: urlEncoded.toString(),
+                body,
             });
-
-            if (response.ok) {
-                form.reset();
+            if (res.ok) {
+                formRef.current.reset();
                 setShowAlert(true);
-
-                setTimeout(() => {
-                    if (alertRef.current) {
-                        alertRef.current.focus();
-                    }
-                }, 100);
-
+                setTimeout(() => alertRef.current?.focus(), 100);
                 setTimeout(() => setShowAlert(false), 3000);
             } else {
                 alert("Something went wrong! Please try again later.");
             }
-        } catch (error) {
-            console.error("Error!", error.message);
+        } catch (err) {
+            console.error(err);
             alert("Something went wrong! Please try again later.");
         } finally {
             setLoading(false);
         }
     };
 
+    // Highlight border on focus — inline so it works without Tailwind JIT
+    const fieldStyle = (name) => ({
+        ...INPUT_STYLE,
+        borderColor: focusedField === name ? C.blue : C.border,
+        transition: "border-color 0.15s",
+    });
+
     return (
         <div className="text-sm">
+            {/* Header */}
             <p className="mb-3" style={{ color: C.green }}>
                 $ echo "Let's build something together"
             </p>
@@ -63,6 +69,8 @@ export default function ContactModal() {
                 a good chat about tech. Feel free to reach out through any
                 channel below.
             </p>
+
+            {/* Contact rows */}
             {CONTACT_DATA.map(({ platform, handle, icon }) => (
                 <div
                     key={platform}
@@ -80,57 +88,74 @@ export default function ContactModal() {
                 </div>
             ))}
 
-            <div className="text-center mt-5 w-full px-4 py-4 border-t-2 border-t-black text-white">
+            {/* Form section */}
+            <div
+                className="mt-5 pt-4 border-t"
+                style={{ borderColor: C.border }}>
+                <p className="mb-4 text-xs" style={{ color: C.muted }}>
+                    <span style={{ color: C.green }}>$</span> ./send-message.sh
+                </p>
+
                 <form
                     ref={formRef}
-                    name="Ant1po1e-contact-form"
+                    name="contact-form"
                     onSubmit={handleSubmit}
-                    className="space-y-4 max-w-md mx-auto"
-                    aria-describedby="contact-description">
-                    <p id="contact-description" className="sr-only">
-                        Fill out this form to send me a message
-                    </p>
-
+                    className="space-y-3">
+                    {/* Name */}
                     <div>
-                        <label htmlFor="name" className="sr-only">
-                            Name
+                        <label
+                            className="block mb-1 text-xs"
+                            style={{ color: C.muted }}>
+                            <span style={{ color: C.blue }}>--name</span>
                         </label>
                         <input
                             type="text"
-                            id="name"
                             name="name"
-                            placeholder="Name"
                             required
-                            aria-label="Your name"
-                            className="w-full bg-slate-700/50 shadow-lg text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 transition duration-300"
+                            placeholder="Your name"
+                            style={fieldStyle("name")}
+                            onFocus={() => setFocused("name")}
+                            onBlur={() => setFocused(null)}
                         />
                     </div>
+
+                    {/* Email */}
                     <div>
-                        <label htmlFor="email" className="sr-only">
-                            Email
+                        <label
+                            className="block mb-1 text-xs"
+                            style={{ color: C.muted }}>
+                            <span style={{ color: C.blue }}>--email</span>
                         </label>
                         <input
                             type="email"
-                            id="email"
                             name="email"
-                            placeholder="Email"
                             required
-                            aria-label="Your email address"
-                            className="w-full bg-slate-700/50 shadow-lg text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 transition duration-300"
+                            placeholder="your@email.com"
+                            style={fieldStyle("email")}
+                            onFocus={() => setFocused("email")}
+                            onBlur={() => setFocused(null)}
                         />
                     </div>
+
+                    {/* Message */}
                     <div>
-                        <label htmlFor="message" className="sr-only">
-                            Message
+                        <label
+                            className="block mb-1 text-xs"
+                            style={{ color: C.muted }}>
+                            <span style={{ color: C.blue }}>--message</span>
                         </label>
                         <textarea
-                            id="message"
                             name="message"
-                            placeholder="Your message"
-                            rows="4"
                             required
-                            aria-label="Your message"
-                            className="w-full bg-slate-700/50 shadow-lg text-white text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder:text-slate-300 transition duration-300 resize-none"></textarea>
+                            rows={4}
+                            placeholder="Your message..."
+                            style={{
+                                ...fieldStyle("message"),
+                                resize: "vertical",
+                            }}
+                            onFocus={() => setFocused("message")}
+                            onBlur={() => setFocused(null)}
+                        />
                     </div>
 
                     {/* Success alert */}
@@ -138,34 +163,62 @@ export default function ContactModal() {
                         <div
                             ref={alertRef}
                             tabIndex={-1}
-                            className="items-center justify-center w-full text-center mb-8 p-4 space-x-4 rounded-lg shadow text-green-400 divide-gray-700 bg-white border border-green-300 flex transition-opacity duration-300"
                             role="alert"
-                            aria-live="polite">
-                            <i className="bi bi-send" aria-hidden="true"></i>
-                            <div className="pl-1 text-sm font-normal">
-                                <span className="font-bold">Thanks!</span> Your
-                                message has been submitted.
-                            </div>
+                            aria-live="polite"
+                            className="flex items-center gap-3 px-3 py-2.5 rounded text-xs"
+                            style={{
+                                background: `${C.green}18`,
+                                border: `1px solid ${C.green}55`,
+                                color: C.green,
+                            }}>
+                            <span>✓</span>
+                            <span>
+                                <strong>Thanks!</strong> Your message has been
+                                submitted.
+                            </span>
                         </div>
                     )}
 
-                    {/* Submit button */}
-                    <div className="text-center flex justify-center">
+                    {/* Submit */}
+                    <div className="pt-1">
                         <button
                             type="submit"
                             disabled={loading}
-                            aria-busy={loading}
-                            className="relative flex h-[50px] w-24 md:hover:w-40 items-center justify-center overflow-hidden rounded-lg bg-slate-700/50 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-green-400 before:duration-500 before:ease-out md:hover:shadow-green-400 md:hover:before:h-56 md:hover:before:w-56 duration-300">
-                            <span className="relative z-10">
-                                {loading ? (
-                                    <i
-                                        className="bi bi-arrow-clockwise animate-spin inline-block"
-                                        aria-hidden="true"
-                                    />
-                                ) : (
-                                    "Submit"
-                                )}
-                            </span>
+                            className="flex items-center gap-2 px-4 py-2 rounded text-xs md:transition-colors md:duration-150"
+                            style={{
+                                background: loading
+                                    ? `${C.green}18`
+                                    : `${C.green}22`,
+                                border: `1px solid ${C.green}66`,
+                                color: C.green,
+                                fontFamily: "inherit",
+                                cursor: loading ? "not-allowed" : "pointer",
+                                opacity: loading ? 0.7 : 1,
+                            }}
+                            onMouseEnter={(e) => {
+                                if (!loading)
+                                    e.currentTarget.style.background = `${C.green}33`;
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = `${C.green}22`;
+                            }}>
+                            {loading ? (
+                                <>
+                                    <span
+                                        className="inline-block"
+                                        style={{
+                                            animation:
+                                                "spin 1s linear infinite",
+                                        }}>
+                                        ↻
+                                    </span>{" "}
+                                    Sending...
+                                </>
+                            ) : (
+                                <>
+                                    <span>▶</span> run
+                                </>
+                            )}
                         </button>
                     </div>
                 </form>
@@ -175,6 +228,8 @@ export default function ContactModal() {
                 <span style={{ color: C.green }}>→</span> Response time: usually
                 within 24h
             </p>
+
+            <style>{`@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
         </div>
     );
 }
