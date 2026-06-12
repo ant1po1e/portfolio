@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { C } from "./data/colors";
 import Cursor from "./components/terminal/Cursor";
 import TerminalLine from "./components/terminal/TerminalLine";
@@ -38,6 +38,16 @@ export default function App() {
         enabled: !isMobile,
     });
 
+    const COMMANDS_LIST = Object.keys(COMMANDS);
+
+    const suggestion = useMemo(() => {
+        if (!input) return "";
+        const match = COMMANDS_LIST.find(
+            (cmd) => cmd.startsWith(input) && cmd !== input,
+        );
+        return match ? match.slice(input.length) : "";
+    }, [input]);
+
     // ── Boot ──────────────────────────────────────────────────────────────────
     useEffect(() => {
         let cancelled = false;
@@ -56,7 +66,6 @@ export default function App() {
         return () => {
             cancelled = true;
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // ── Auto-scroll ───────────────────────────────────────────────────────────
@@ -166,7 +175,12 @@ export default function App() {
 
     // ── Keyboard ──────────────────────────────────────────────────────────────
     const handleKey = (e) => {
-        if (e.key === "Enter") {
+        if (e.key === "Tab") {
+            e.preventDefault(); 
+            if (suggestion) setInput(input + suggestion);
+        } else if (e.key === "Escape") {
+            setInput("");
+        } else if (e.key === "Enter") {
             runCommand(input);
             setInput("");
         } else if (e.key === "ArrowUp") {
@@ -228,8 +242,6 @@ export default function App() {
                               "'JetBrains Mono', 'Fira Code', monospace",
                       }
             }
-            // ↓ KEY FIX: only focus terminal when clicking the bare background,
-            //   not when clicking inside any child window or modal
             onClick={(e) => {
                 if (!isMobile && e.target === e.currentTarget) {
                     inputRef.current?.focus();
@@ -321,11 +333,14 @@ export default function App() {
                 <div
                     className="flex-1 overflow-y-auto leading-7"
                     style={{ padding: "1rem 1.25rem" }}
-                    // Mobile: tap anywhere in body to focus terminal input
                     onClick={(e) => {
-                        if (isMobile && e.target === e.currentTarget) {
-                            inputRef.current?.focus();
-                        }
+                        if (
+                            e.target.closest(
+                                "input, textarea, select, button, a",
+                            )
+                        )
+                            return;
+                        inputRef.current?.focus();
                     }}>
                     {lines.map((line, i) => (
                         <TerminalLine key={i} line={line} />
@@ -337,9 +352,20 @@ export default function App() {
                             <span style={{ color: C.muted }}>@portfolio</span>
                             <span style={{ color: C.text }}>:~$&nbsp;</span>
                             <span className="relative flex-1 min-w-0 flex items-center">
+                                {/* Mirror: typed text (invisible, sets width) */}
                                 <span
                                     aria-hidden="true"
-                                    className="invisible whitespace-pre"
+                                    className="invisible whitespace-pre absolute"
+                                    style={{
+                                        fontFamily: "inherit",
+                                        fontSize: "inherit",
+                                    }}>
+                                    {input}
+                                </span>
+                                {/* Visible typed portion */}
+                                <span
+                                    aria-hidden="true"
+                                    className="whitespace-pre pointer-events-none"
                                     style={{
                                         color: C.blue,
                                         fontFamily: "inherit",
@@ -347,7 +373,20 @@ export default function App() {
                                     }}>
                                     {input}
                                 </span>
-                                <Cursor />
+                                {/* Ghost suggestion text */}
+                                {suggestion && (
+                                    <span
+                                        aria-hidden="true"
+                                        className="whitespace-pre pointer-events-none"
+                                        style={{
+                                            color: `${C.green}55`,
+                                            fontFamily: "inherit",
+                                            fontSize: "inherit",
+                                        }}>
+                                        {suggestion}
+                                    </span>
+                                )}
+                                {!suggestion && <Cursor />}
                                 <input
                                     ref={inputRef}
                                     value={input}
@@ -355,7 +394,7 @@ export default function App() {
                                     onKeyDown={handleKey}
                                     className="absolute inset-0 bg-transparent border-none outline-none w-full"
                                     style={{
-                                        color: C.blue,
+                                        color: "transparent", 
                                         fontFamily: "inherit",
                                         fontSize: "inherit",
                                         caretColor: "transparent",
