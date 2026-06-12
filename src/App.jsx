@@ -302,7 +302,7 @@ export default function App() {
                     <span
                         className="flex-1 text-center"
                         style={{ color: C.muted, fontSize: "0.75rem" }}>
-                        guest@portfolio — bash
+                        ant1po1e@portfolio — bash
                     </span>
                     {!isMobile && (
                         <div className="flex items-center gap-2">
@@ -348,7 +348,7 @@ export default function App() {
 
                     {booted && (
                         <div className="flex items-center">
-                            <span style={{ color: C.green }}>guest</span>
+                            <span style={{ color: C.green }}>ant1po1e</span>
                             <span style={{ color: C.muted }}>@portfolio</span>
                             <span style={{ color: C.text }}>:~$&nbsp;</span>
                             <span className="relative flex-1 min-w-0 flex items-center">
