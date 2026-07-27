@@ -14,8 +14,15 @@ const BOOT_LINES = [
     { type: "divider" },
 ];
 
-const QUICK_CMDS = ["help", "about", "skills", "projects", "contact"];
-const ALL_WINDOW_IDS = ["terminal", "about", "skills", "projects", "contact"];
+const QUICK_CMDS = ["help", "about", "skills", "projects", "cv", "contact"];
+const ALL_WINDOW_IDS = [
+    "terminal",
+    "about",
+    "skills",
+    "projects",
+    "cv",
+    "contact",
+];
 
 export default function App() {
     const isMobile = useIsMobile();
@@ -88,9 +95,13 @@ export default function App() {
                     const MODAL_W = 560;
                     const MODAL_H = 440;
                     const stagger =
-                        ({ about: 0, skills: 1, projects: 2, contact: 3 }[
-                            key
-                        ] ?? 0) * 24;
+                        ({
+                            about: 0,
+                            skills: 1,
+                            projects: 2,
+                            cv: 3,
+                            contact: 4,
+                        }[key] ?? 0) * 24;
                     let spawnX, spawnY;
                     const el = elementRef.current;
                     if (el) {

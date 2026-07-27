@@ -16,6 +16,7 @@ const COMMANDS = {
           ["profile",   "View my profile picture"],
           ["skills",   "My technical skills"],
           ["projects", "What I've built"],
+          ["cv",       "View / download my CV"],
           ["contact",  "Get in touch"],
           ["clear",    "Clear terminal"],
           ["help",     "Show this help message"],
@@ -33,6 +34,7 @@ const COMMANDS = {
   projects: { modal: "projects", output: <span style={{ color: C.muted }}>Fetching projects…</span>    },
   contact:  { modal: "contact",  output: <span style={{ color: C.muted }}>Opening contact.sh…</span>   },
   profile:  { modal: "profile",  output: <span style={{ color: C.muted }}>Opening profile.webp…</span>   },
+  cv:       { modal: "cv",       output: <span style={{ color: C.muted }}>Opening cv.pdf…</span>          },
 };
 
 export default COMMANDS;

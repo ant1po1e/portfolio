@@ -7,6 +7,7 @@ import {
     ProjectsModal,
     ContactModal,
     ProfileModal,
+    CVModal,
 } from "./index";
 import useDraggable from "../../hooks/useDraggable";
 
@@ -16,6 +17,7 @@ const MODALS = {
     projects: { title: "ls -la projects/", Component: ProjectsModal },
     contact: { title: "bash contact.sh", Component: ContactModal },
     profile: { title: "bash profile.sh", Component: ProfileModal },
+    cv: { title: "cat cv.pdf", Component: CVModal },
 };
 
 const INTERACTIVE_TAGS = [

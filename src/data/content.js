@@ -62,10 +62,17 @@ export const PROJECTS_DATA = [
         url: "https://antipole.my.id",
     },
     {
+        name: "valenora",
+        desc: "A tool creating SV and BPM manipulation for osu!mania",
+        stack: ["C#", "WPF", "WinForms"],
+        status: "active",
+        url: "#",
+    },
+    {
         name: "tabungan-ceritanya-v2",
         desc: "A desktop application to help users manage their savings and financial goals effectively.",
         stack: ["C#", "WinForms", "SQLite"],
-        status: "active",
+        status: "archived",
         url: "https://github.com/ant1po1e/finance-management-v2/releases/tag/v2.1",
     },
     {
@@ -126,9 +133,19 @@ export const PROJECTS_DATA = [
     },
 ];
 
+export const CV_DATA = {
+    pdfPath: "/cv.pdf",
+    fileName: "Apriansyah-Yudha-Pratama-CV.pdf",
+    updated: "2026",
+};
+
 export const CONTACT_DATA = [
     { platform: "email", handle: "apolantipole@gmail.com", icon: "✉" },
     { platform: "github", handle: "github.com/ant1po1e", icon: "⌥" },
-    { platform: "linkedin", handle: "linkedin.com/in/apriansyah-yudha-pratama-805795265", icon: "◈" },
+    {
+        platform: "linkedin",
+        handle: "linkedin.com/in/apriansyah-yudha-pratama-805795265",
+        icon: "◈",
+    },
     { platform: "twitter", handle: "@apolantipole", icon: "◎" },
 ];
