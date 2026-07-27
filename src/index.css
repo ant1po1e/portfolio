@@ -14,6 +14,22 @@ body {
 	background-position: center center;
 }
 
+/* iOS Safari renders `background-attachment: fixed` incorrectly (and it's
+   janky on scroll everywhere on mobile), so fall back to a plain scroll
+   attachment below the tablet breakpoint. */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
 
 @media (min-width: 768px) {
   ::-webkit-scrollbar       { width: 5px; }
@@ -21,9 +37,20 @@ body {
   ::-webkit-scrollbar-thumb { background: #30363D; border-radius: 3px; }
 }
 
+/* Mobile: kill hover/drag-driven transitions (no hover on touch, and they
+   fight with scroll performance), but keep deliberate entrance animations —
+   those use `animation`, not `transition`, so they're untouched below. */
 @media (max-width: 767px) {
   *, *::before, *::after {
     transition: none !important;
-    animation: none !important;
   }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-modal-enter {
+  animation: modal-in 0.22s ease-out;
 }

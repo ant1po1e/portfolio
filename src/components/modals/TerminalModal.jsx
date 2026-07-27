@@ -69,29 +69,37 @@ export default function TerminalModal({
                 borderColor: C.border,
                 cursor: isMobile ? "default" : isDragging ? "grabbing" : "grab",
             }}>
-            <div className="flex gap-1.5 items-center">
+            <div className="flex gap-1 items-center -ml-1.5">
                 <button
                     onClick={onClose}
-                    className="w-3 h-3 rounded-full md:hover:brightness-75"
-                    style={{ background: C.red, cursor: "pointer" }}
+                    className="flex items-center justify-center w-6 h-6 md:w-5 md:h-5 rounded-full bg-transparent border-none p-0 cursor-pointer"
                     title="Close"
-                />
+                    aria-label="Close">
+                    <span
+                        className="w-3 h-3 rounded-full block md:hover:brightness-75"
+                        style={{ background: C.red }}
+                    />
+                </button>
                 <span
-                    className="w-3 h-3 rounded-full block"
+                    className="w-3 h-3 rounded-full block mx-0.5"
                     style={{ background: C.yellow }}
                 />
                 {isMobile ? (
                     <span
-                        className="w-3 h-3 rounded-full block"
+                        className="w-3 h-3 rounded-full block mx-0.5"
                         style={{ background: C.green }}
                     />
                 ) : (
                     <button
                         onClick={() => setZoom((z) => !z)}
-                        className="w-3 h-3 rounded-full md:hover:brightness-75"
-                        style={{ background: C.green, cursor: "pointer" }}
+                        className="flex items-center justify-center w-5 h-5 rounded-full bg-transparent border-none p-0 cursor-pointer mx-0.5"
                         title={zoom ? "Zoom out" : "Zoom in"}
-                    />
+                        aria-label={zoom ? "Zoom out" : "Zoom in"}>
+                        <span
+                            className="w-3 h-3 rounded-full block md:hover:brightness-75"
+                            style={{ background: C.green }}
+                        />
+                    </button>
                 )}
             </div>
             <span
@@ -106,24 +114,29 @@ export default function TerminalModal({
     if (isMobile) {
         return (
             <div
-                className="fixed inset-0 flex flex-col overflow-hidden"
+                className="fixed inset-0 flex flex-col overflow-hidden mobile-modal-enter"
                 style={{
                     background: C.surface,
                     border: `1px solid ${C.border}`,
                     fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
                     zIndex: 50,
+                    paddingTop: "var(--safe-top)",
+                    paddingBottom: "var(--safe-bottom)",
+                    paddingLeft: "var(--safe-left)",
+                    paddingRight: "var(--safe-right)",
                 }}>
                 <TitleBar
                     extraRight={
                         <button
                             onClick={onClose}
-                            className="text-xs px-2 py-1 rounded border"
+                            className="text-xs px-3 rounded border shrink-0"
                             style={{
                                 color: C.muted,
                                 borderColor: C.border,
                                 background: "transparent",
                                 cursor: "pointer",
                                 fontFamily: "inherit",
+                                minHeight: 32,
                             }}>
                             ✕ back
                         </button>
@@ -131,7 +144,11 @@ export default function TerminalModal({
                 />
                 <div
                     className="overflow-y-auto flex-1 p-5"
-                    style={{ color: C.text, fontSize: "0.9rem" }}>
+                    style={{
+                        color: C.text,
+                        fontSize: "0.9rem",
+                        WebkitOverflowScrolling: "touch",
+                    }}>
                     <Component />
                 </div>
             </div>
@@ -142,8 +159,6 @@ export default function TerminalModal({
         <div
             ref={elementRef}
             className="fixed flex flex-col rounded-xl overflow-hidden"
-            // ↓ handleWrapperMouseDown, bukan onFocus langsung —
-            //   tidak preventDefault, tidak ganggu focus
             onMouseDown={handleWrapperMouseDown}
             style={{
                 top: 0,

@@ -265,6 +265,14 @@ export default function App() {
                 style={{
                     ...terminalStyle,
                     fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+                    ...(isMobile
+                        ? {
+                              paddingTop: "var(--safe-top)",
+                              paddingBottom: "var(--safe-bottom)",
+                              paddingLeft: "var(--safe-left)",
+                              paddingRight: "var(--safe-right)",
+                          }
+                        : {}),
                 }}
                 onMouseDown={
                     !isMobile ? () => bringToFront("terminal") : undefined
@@ -428,12 +436,13 @@ export default function App() {
 
                 {/* Quick command bar */}
                 <div
-                    className="shrink-0 flex flex-wrap gap-x-4 gap-y-1 border-t"
+                    className="shrink-0 flex flex-wrap gap-x-2 gap-y-2 border-t"
                     style={{
                         borderColor: C.border,
                         padding: isMobile
-                            ? "0.625rem 1rem"
+                            ? "0.625rem 0.875rem"
                             : "0.375rem 1.25rem",
+                        justifyContent: isMobile ? "center" : "flex-start",
                     }}>
                     {QUICK_CMDS.map((cmd) => (
                         <button
@@ -443,12 +452,23 @@ export default function App() {
                                 runCommand(cmd);
                                 setInput("");
                             }}
-                            className="bg-transparent border-none cursor-pointer md:transition-colors md:duration-150 md:hover:text-[#58A6FF]"
+                            className={
+                                isMobile
+                                    ? "cursor-pointer rounded-full border"
+                                    : "bg-transparent border-none cursor-pointer md:transition-colors md:duration-150 md:hover:text-[#58A6FF]"
+                            }
                             style={{
-                                color: C.muted,
+                                color: isMobile ? C.text : C.muted,
                                 fontFamily: "inherit",
-                                fontSize: isMobile ? "0.85rem" : "0.72rem",
-                                padding: isMobile ? "0.25rem 0" : "0",
+                                fontSize: isMobile ? "0.8rem" : "0.72rem",
+                                padding: isMobile ? "0.4rem 0.85rem" : "0",
+                                background: isMobile
+                                    ? `${C.border}88`
+                                    : "transparent",
+                                borderColor: isMobile
+                                    ? C.border
+                                    : "transparent",
+                                minHeight: isMobile ? 36 : "auto",
                             }}>
                             {cmd}
                         </button>
