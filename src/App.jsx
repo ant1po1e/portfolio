@@ -14,10 +14,11 @@ const BOOT_LINES = [
     { type: "divider" },
 ];
 
-const QUICK_CMDS = ["help", "about", "skills", "projects", "cv", "contact"];
+const QUICK_CMDS = ["help", "about", "profile", "skills", "projects", "cv", "contact"];
 const ALL_WINDOW_IDS = [
     "terminal",
     "about",
+    "profile",
     "skills",
     "projects",
     "cv",
